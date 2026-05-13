@@ -86,7 +86,7 @@
 
 .header__main {
   background-color: rgba(21, 38, 56, 0.55);
-  padding: 25px 0;
+  padding: 4px 0;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -179,11 +179,11 @@
 
 .header__nav .menu__link:hover,
 .header__nav .menu__link:focus {
-  color: #FFEC01;
+  color: #ffffff;
 }
 
 .header__nav .menu__link--active-link {
-  color: #FFEC01;
+  color: #ffffff;
 }
 
 /* Submenú dropdown */

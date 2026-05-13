@@ -508,7 +508,7 @@ tfoot td {
 }
 
 .menu .menu__item--depth-1 > .menu__link--active-link:after {
-  background-color: {{ nav_font_color }};
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 767px) {

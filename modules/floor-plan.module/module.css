@@ -5,6 +5,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  background-color: #ffffff;
 }
 
 /* ── Slides: solo el activo es visible ──────────────────── */
