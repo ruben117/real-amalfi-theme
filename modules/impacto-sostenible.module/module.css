@@ -1,0 +1,159 @@
+.impacto-sostenible {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 40px;
+  color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.impacto-sostenible__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Manejo de Layout */
+.layout-comparison_first .impacto-sostenible__container {
+  flex-direction: row-reverse;
+}
+
+/* Columna de Texto */
+.impacto-sostenible__text-col {
+  flex: 1;
+}
+
+.impacto-sostenible__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.impacto-sostenible__desc p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Alineaciones internas del texto */
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* Columna de Comparativa */
+.impacto-sostenible__comparison-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.layout-comparison_first .impacto-sostenible__comparison-col {
+  align-items: flex-end;
+}
+
+.impacto-sostenible__comparison-header {
+  margin-bottom: 24px;
+}
+
+.impacto-sostenible__comp-label {
+  font-size: 14px;
+  text-transform: none;
+  display: block;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.impacto-sostenible__comp-subtitle {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.impacto-sostenible__comparison-grid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.impacto-sostenible__comp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.impacto-sostenible__item-label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.impacto-sostenible__item-box {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.box--sin {
+  background-color: #8D735C; /* Tono café de la imagen */
+  color: #ffffff;
+}
+
+.box--con {
+  background-color: #69B34C; /* Tono verde de la imagen */
+  color: #ffffff;
+}
+
+.impacto-sostenible__savings-tag {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .impacto-sostenible__container {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  
+  .impacto-sostenible__text-col {
+    text-align: center;
+  }
+  
+  .impacto-sostenible__comparison-col {
+    align-items: center !important;
+  }
+  
+  .impacto-sostenible__comparison-grid {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .impacto-sostenible {
+    padding: 40px 20px;
+  }
+  
+  .impacto-sostenible__item-box {
+    font-size: 28px;
+  }
+  .impacto-sostenible__title {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+  }
+}

@@ -1,0 +1,133 @@
+<!--
+  templateType: section
+  label: Prototipos – Real Amalfi
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/prototipos.png
+  description: "Grid 4 columnas de prototipos con imagen + gradient + info. Disclaimer y CTA row debajo."
+-->
+
+{% dnd_section
+  background_image={
+    "backgroundPosition": "MIDDLE_CENTER",
+    "backgroundSize": "cover",
+    "imageUrl": context.background_image or get_asset_url("../images/bg-prototipos-amalfi.png")
+  },
+  padding={
+    "default": { "top": 100, "bottom": 100 },
+    "mobile":  { "top": 60, "bottom": 60 }
+  }
+%}
+
+  {% dnd_column offset=0, width=12 %}
+
+    {# ── Grid de prototipos ───────────────────────────────── #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/prototipos",
+        label="Prototipos – Grid",
+        extra_classes="prototipos__grid-module",
+        items=[
+          {
+            "prototipo_imagen": { "src": get_asset_url("../images/prototipo-vizzini.png"), "alt": "Prototipo Alcalá", "loading": "lazy" },
+            "prototipo_nombre": "Vizzini",
+            "prototipo_m2": "84.14 m²",
+            "prototipo_desc": "Ideal para familias",
+            "prototipo_imagen_recamaras": { "src": get_asset_url("../images/ico-recamaras.png"), "alt": "Recamaras", "loading": "lazy"},
+            "prototipo_imagen_banos": { "src": get_asset_url("../images/ico-banos.png"), "alt": "Baños", "loading": "lazy"},
+            "prototipo_amen_desc_1": "Recámaras",
+            "prototipo_amen_num_1": "3",
+            "prototipo_amen_desc_2": "Baños",
+            "prototipo_amen_num_2": "2",
+            "prototipo_enlace": { 
+              "url": { "href": "/prototipo" }, 
+              "open_in_new_tab": false 
+            },
+          },
+          {
+            "prototipo_imagen": { "src": get_asset_url("../images/prototipo-burgos.png"), "alt": "Prototipo Palmyra", "loading": "lazy" },
+            "prototipo_nombre": "Burgos",
+            "prototipo_m2": "58.04 m²",
+            "prototipo_desc": "Ideal para inversión",
+            "prototipo_imagen_recamaras": { "src": get_asset_url("../images/ico-recamaras.png"), "alt": "Recamaras", "loading": "lazy"},
+            "prototipo_imagen_banos": { "src": get_asset_url("../images/ico-banos.png"), "alt": "Baños", "loading": "lazy"},
+            "prototipo_amen_desc_1": "Recámaras",
+            "prototipo_amen_num_1": "2",
+            "prototipo_amen_desc_2": "Baños",
+            "prototipo_amen_num_2": "1",
+            "prototipo_enlace": { 
+              "url": { "href": "/prototipo" }, 
+              "open_in_new_tab": false 
+            },
+          },
+          {
+            "prototipo_imagen": { "src": get_asset_url("../images/prototipo-bonanova.png"), "alt": "Prototipo Valldemosa", "loading": "lazy" },
+            "prototipo_nombre": "Bonanova",
+            "prototipo_m2": "86.29 m²",
+            "prototipo_desc": "Amplitud y confort",
+            "prototipo_imagen_recamaras": { "src": get_asset_url("../images/ico-recamaras.png"), "alt": "Recamaras", "loading": "lazy"},
+            "prototipo_imagen_banos": { "src": get_asset_url("../images/ico-banos.png"), "alt": "Baños", "loading": "lazy"},
+            "prototipo_amen_desc_1": "Recámaras",
+            "prototipo_amen_num_1": "2",
+            "prototipo_amen_desc_2": "Baños",
+            "prototipo_amen_num_2": "2",
+            "prototipo_enlace": { 
+              "url": { "href": "/prototipo" }, 
+              "open_in_new_tab": false 
+            },
+          },
+          {
+            "prototipo_imagen": { "src": get_asset_url("../images/hero-prototipo-lerida.png"), "alt": "Prototipo Paraíso", "loading": "lazy" },
+            "prototipo_nombre": "Lérida",
+            "prototipo_m2": "100.85 m²",
+            "prototipo_desc": "Práctica y cómoda",
+            "prototipo_imagen_recamaras": { "src": get_asset_url("../images/ico-recamaras.png"), "alt": "Recamaras", "loading": "lazy" },
+            "prototipo_imagen_banos": { "src": get_asset_url("../images/ico-banos.png"), "alt": "Baños", "loading": "lazy"},
+            "prototipo_amen_desc_1": "Recámaras",
+            "prototipo_amen_num_1": "3",
+            "prototipo_amen_desc_2": "Baños",
+            "prototipo_amen_num_2": "2.5",
+            "prototipo_enlace": { 
+              "url": { "href": "/prototipo" }, 
+              "open_in_new_tab": false 
+            },
+          }
+        ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# ── Disclaimer ───────────────────────────────────────── #}
+    {# {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        label="Prototipos – Disclaimer",
+        extra_classes="prototipos__disclaimer-module",
+        html='<p>*La vivienda no incluye mobiliario ni decoración. La entrega inmediata aplica de 35 a 45 días después de la firma de escrituras.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %} #}
+
+    {# ── CTA Row: heading + botones ───────────────────────── #}
+    {# {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/header",
+        label="Prototipos – CTA Heading",
+        extra_classes="prototipos__cta-heading",
+        header_tag="h2",
+        value="¡Aceptamos crédito Infonavit y créditos bancarios!",
+        offset=0, width=6
+      %}
+      {% end_dnd_module %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        label="Prototipos – CTA Botones",
+        extra_classes="prototipos__cta-buttons",
+        html='<div class="prototipos__cta-actions"><a href="#agenda" class="btn-primary">Agenda una visita</a><a href="#cotizador" class="btn-outline--secondary">Pre-cotizador</a></div>',
+        offset=6, width=6
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %} #}
+
+  {% end_dnd_column %}
+
+{% end_dnd_section %}

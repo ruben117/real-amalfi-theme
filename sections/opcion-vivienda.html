@@ -1,0 +1,70 @@
+<!--
+  templateType: section
+  label: Opciones de Vivienda
+  isAvailableForNewContent: true
+  screenshotPath: ../images/template-previews/home.png
+  description: "Sección que muestra las opciones de Casas y Departamentos en dos columnas."
+-->
+
+{% dnd_section
+  background_color="#F3FEFF",
+  vertical_alignment="MIDDLE",
+  padding={
+    "default": { "top": 40, "bottom": 40 },
+    "mobile":  { "top": 50, "bottom": 50 }
+  }
+%}
+
+  {# ── Fila de Título Principal ───────────────────────────── #}
+  {% dnd_column offset=0, width=12 %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/header",
+        label="Título de Sección",
+        extra_classes="opcion__heading-module",
+        header_tag="h2",
+        value="¿Casa o Departamento? Tú eliges cómo vivir."
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+        {# Opción 1: Departamentos #}
+    {% dnd_column offset=0, width=6 %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/card-vivienda.module",
+          label="Opción – Departamentos",
+          image={
+            "src": get_asset_url("../images/opcion-departamento.png"),
+            "alt": "Departamentos"
+          },
+          title="Departamentos",
+          content="<p class='opcio-descripcion-1'>La opción inteligente para inversionistas que buscan rentas vacacionales o de largo plazo. Practicidad y vistas increíbles.</p>",
+          text_alignment="right"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {# Opción 2: Casas #}
+    {% dnd_column offset=6, width=6 %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/card-vivienda.module",
+          label="Opción – Casas",
+          image={
+            "src": get_asset_url("../images/opcion-casa.png"),
+            "alt": "Casas"
+          },
+          title="Casas",
+          content="<p class='opcio-descripcion-2'>El espacio perfecto para ver crecer a tu familia con patio privado y la privacidad que siempre soñaste.</p>",
+          text_alignment="left"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+
+{% end_dnd_section %}

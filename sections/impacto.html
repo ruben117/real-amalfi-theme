@@ -1,0 +1,49 @@
+<!--
+  templateType: section
+  label: Impacto Sostenible
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-banner.png
+  description: "Sección que destaca el impacto sostenible y el ahorro con ecotecnias mediante una comparativa visual."
+-->
+
+{% dnd_section
+  background_color="#F3FEFF",
+  vertical_alignment="MIDDLE",
+  padding={
+    "default": { "top": 80, "bottom": 80 },
+    "mobile":  { "top": 50, "bottom": 50 }
+  }
+%}
+
+  {% dnd_column offset=0, width=12 %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/impacto-sostenible.module",
+        label="Impacto Sostenible – Módulo",
+        text_content={
+          "title": "Impacto sostenible en tu hogar",
+          "description": "<p>Vinte crea comunidades que generan un impacto social, económico y ambiental positivo mediante soluciones amigables con el medio ambiente.</p>",
+          "alignment": "left"
+        },
+        comparison={
+          "title": "Pago de luz al mes*",
+          "subtitle": "Familia de 4 integrantes",
+          "label_sin": "Sin ecotecnias:",
+          "amount_sin": "$300.00",
+          "label_con": "Con ecotecnias:",
+          "amount_con": "$150.00",
+          "savings_label": "Ahorro 50%"
+        },
+        design={
+          "bg_image": {
+            "src": get_asset_url("../images/bg-impacto.png"),
+            "alt": "Fondo Impacto Sostenible"
+          },
+          "layout_order": "text_first"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+{% end_dnd_section %}

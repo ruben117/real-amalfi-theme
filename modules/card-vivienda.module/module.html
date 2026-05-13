@@ -1,0 +1,19 @@
+<div class="card-vivienda align-{{ module.text_alignment }}">
+  {% if module.image.src %}
+    <div class="card-vivienda__image-container">
+      {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' if module.image.resizable else '' %}
+      <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ sizeAttrs }} loading="{{ module.image.loading }}">
+    </div>
+  {% endif %}
+
+  <div class="card-vivienda__content" style="margin-top: {{ module.styles.margin_top }}px;">
+    {% if module.title %}
+      <h3 class="card-vivienda__title">{{ module.title }}</h3>
+    {% endif %}
+    {% if module.content %}
+      <div class="card-vivienda__desc">
+        {{ module.content }}
+      </div>
+    {% endif %}
+  </div>
+</div>

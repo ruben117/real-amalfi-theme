@@ -1,0 +1,108 @@
+[
+  {
+    "label": "Contenido de Texto",
+    "name": "text_content",
+    "type": "group",
+    "children": [
+      {
+        "label": "Título",
+        "name": "title",
+        "type": "text",
+        "default": "Impacto sostenible en tu hogar"
+      },
+      {
+        "label": "Descripción",
+        "name": "description",
+        "type": "richtext",
+        "default": "<p>Vinte crea comunidades que generan un impacto social, económico y ambiental positivo mediante soluciones amigables con el medio ambiente.</p>"
+      },
+      {
+        "label": "Alineación del texto",
+        "name": "alignment",
+        "type": "choice",
+        "choices": [
+          ["left", "Izquierda"],
+          ["center", "Centro"],
+          ["right", "Derecha"]
+        ],
+        "default": "left"
+      }
+    ]
+  },
+  {
+    "label": "Comparativa de Ahorro",
+    "name": "comparison",
+    "type": "group",
+    "children": [
+      {
+        "label": "Título Comparativa",
+        "name": "title",
+        "type": "text",
+        "default": "Pago de luz al mes*"
+      },
+      {
+        "label": "Subtítulo Comparativa",
+        "name": "subtitle",
+        "type": "text",
+        "default": "Familia de 4 integrantes"
+      },
+      {
+        "label": "Etiqueta 'Sin ecotecnias'",
+        "name": "label_sin",
+        "type": "text",
+        "default": "Sin ecotecnias:"
+      },
+      {
+        "label": "Monto 'Sin ecotecnias'",
+        "name": "amount_sin",
+        "type": "text",
+        "default": "$300.00"
+      },
+      {
+        "label": "Etiqueta 'Con ecotecnias'",
+        "name": "label_con",
+        "type": "text",
+        "default": "Con ecotecnias:"
+      },
+      {
+        "label": "Monto 'Con ecotecnias'",
+        "name": "amount_con",
+        "type": "text",
+        "default": "$150.00"
+      },
+      {
+        "label": "Etiqueta Ahorro",
+        "name": "savings_label",
+        "type": "text",
+        "default": "Ahorro 50%"
+      }
+    ]
+  },
+  {
+    "label": "Configuración de Diseño",
+    "name": "design",
+    "type": "group",
+    "children": [
+      {
+        "label": "Imagen de Fondo",
+        "name": "bg_image",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": "Impacto sostenible background",
+          "loading": "lazy"
+        }
+      },
+      {
+        "label": "Posición del bloque de texto",
+        "name": "layout_order",
+        "type": "choice",
+        "choices": [
+          ["text_first", "Texto a la izquierda"],
+          ["comparison_first", "Texto a la derecha"]
+        ],
+        "default": "text_first"
+      }
+    ]
+  }
+]

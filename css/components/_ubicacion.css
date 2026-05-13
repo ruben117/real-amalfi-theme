@@ -1,0 +1,58 @@
+/* ============================================================
+   SECCIÓN: UBICACIÓN
+   ============================================================ */
+
+.ubicacion__heading-module h2 {
+  color: var(--heading-color-dark);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading-black);
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.ubicacion__intro-module p {
+  color: var(--text-color);
+  font-size: clamp(13px, 1vw, 15px);
+  margin: 0 0 1.5rem;
+}
+
+.ubicacion__bullet {
+  margin-bottom: 0.75rem;
+}
+.ubicacion__bullet .icon-rt__icon-wrap{
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.ubicacion__bullet .icon-rt {
+  align-items: center;
+}
+
+.ubicacion__bullet .icon-rt__icon {
+  background: transparent;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.ubicacion__bullet .icon-rt__title {
+  font-size: clamp(13px, 1vw, 15px);
+  margin: 0;
+}
+
+.ubicacion__mapa-module img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.icon-rt__title.icon-rt__title-dark,
+.icon-rt__title.icon-rt__title-dark strong{
+  color: var(--heading-color-dark) !important;
+}
+
+/* ── Responsive – Mobile ─────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .ubicacion__mapa-module {
+    margin-top: 2rem;
+  }
+}

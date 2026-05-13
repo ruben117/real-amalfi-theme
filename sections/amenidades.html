@@ -1,0 +1,144 @@
+<!--
+  templateType: section
+  label: Amenidades – Real Amalfi
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/amenidades.png
+  description: "Sección de amenidades con íconos y descripciones."
+-->
+
+
+{% dnd_section
+  background_color="#F3FEFF",
+  vertical_alignment="MIDDLE",
+  padding={ "top": "80px", "bottom": "80px" }
+%}
+
+  {# ── Columna izquierda: heading, íconos, lista ── #}
+  {% dnd_column offset=0, width=5 %}
+
+    {# Título y subtítulo #}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html="<h2>Amenidades premium diseñadas para tu estilo de vida.</h2><p class='icon-rt__subtitulo'>Olvídate de salir de casa para relajarte. Aquí tienes todo lo que necesitas para disfrutar con tu familia e invitados.</p>",
+        extra_classes="amenidades__heading-module",
+        offset=0, width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Stat 1: Case club #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-richtext",
+        label="Stat – Casa Club",
+        extra_classes="patrimonio__stat-amenidades",
+        icon={
+          "src": get_asset_url("../images/ico-casa-club.png"),
+          "alt": "Ícono casa club",
+          "loading": "lazy"
+        },
+        icon_position="left",
+        icon_size=20,
+        icon_gap=16,
+        content='<p class="icon-rt__title"><strong>Casa Club con Alberca</strong></p><p class="icon-rt__desc">El escenario ideal para tus fines de semana.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Stat 2: Ludoteca #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-richtext",
+        label="Stat – Ludoteca",
+        extra_classes="patrimonio__stat-amenidades",
+        icon={
+          "src": get_asset_url("../images/ico-ludoteca.png"),
+          "alt": "Ícono ludoteca",
+          "loading": "lazy"
+        },
+        icon_position="left",
+        icon_size=20,
+        icon_gap=16,
+        content='<p class="icon-rt__title"><strong>Ludoteca</strong></p><p class="icon-rt__desc">Un espacio seguro y creativo para que los más pequeños aprendan jugando.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Stat 3: Gimnasio y Áreas Verdes #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-richtext",
+        label="Stat – Gimnasio y Áreas Verdes",
+        extra_classes="patrimonio__stat-amenidades",
+        icon={
+          "src": get_asset_url("../images/ico-gimnasio.png"),
+          "alt": "Ícono gimnasio",
+          "loading": "lazy"
+        },
+        icon_position="left",
+        icon_size=20,
+        icon_gap=16,
+        content='<p class="icon-rt__title"><strong>Gimnasio y Áreas Verdes</strong></p><p class="icon-rt__desc">Mantente activo en un entorno natural y seguro.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Stat 4: Parque para Mascotas #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-richtext",
+        label="Stat – Parque para Mascotas",
+        extra_classes="patrimonio__stat-amenidades",
+        icon={
+          "src": get_asset_url("../images/ico-mascotas.png"),
+          "alt": "Ícono parque mascotas",
+          "loading": "lazy"
+        },
+        icon_position="left",
+        icon_size=20,
+        icon_gap=16,
+        content='<p class="icon-rt__title"><strong>Parque para Mascotas</strong></p><p class="icon-rt__desc">Porque ellos también son parte de la familia.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Stat 5: Acceso Controlado #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/icon-richtext",
+        label="Stat – Acceso Controlado",
+        extra_classes="patrimonio__stat-amenidades",
+        icon={
+          "src": get_asset_url("../images/ico-acceso.png"),
+          "alt": "Ícono acceso controlado",
+          "loading": "lazy"
+        },
+        icon_position="left",
+        icon_size=20,
+        icon_gap=16,
+        content='<p class="icon-rt__title"><strong>Acceso Controlado</strong></p><p class="icon-rt__desc">Vigilancia 24/7 para tu total tranquilidad.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+
+  {# ── Columna derecha: slider de imágenes ── #}
+  {% dnd_column offset=5, width=7 %}
+
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image-slider",
+        loop=true,
+        autoplay=false,
+        autoplay_delay=4000,
+        extra_classes="amenidades__slider-module",
+        offset=0, width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+
+{% end_dnd_section %}

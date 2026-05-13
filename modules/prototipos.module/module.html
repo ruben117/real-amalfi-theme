@@ -1,0 +1,64 @@
+<div class="prototipos-grid" data-prototipos-grid>
+  {% for item in module.items %}
+  {% set img_src = item.prototipo_imagen.src if item.prototipo_imagen.src else get_asset_url("../../images/large-placeholder-image.png") %}
+  {% set img_src_recamaras = item.prototipo_imagen_recamaras.src if item.prototipo_imagen_recamaras.src else get_asset_url("../../images/ico-recamaras.png") %}
+  {% set img_src_banos = item.prototipo_imagen_banos.src if item.prototipo_imagen_banos.src else get_asset_url("../../images/ico-ico-banos.png") %}
+  {% set href = item.prototipo_enlace.url.href | default('') %}
+
+  {% if href %}
+  <a
+    class="prototipos-grid__card"
+    href="{{ href | escape_url }}"
+    {% if item.prototipo_enlace.open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+    data-prototipo-card
+  >
+  {% else %}
+  <div class="prototipos-grid__card" data-prototipo-card>
+  {% endif %}
+
+    <img
+      class="prototipos-grid__img"
+      src="{{ img_src }}"
+      alt="{{ item.prototipo_imagen.alt | escape_attr }}"
+      loading="{{ item.prototipo_imagen.loading | default('lazy') }}"
+    >
+    <div class="prototipos-grid__overlay"></div>
+    <div class="prototipos-grid__content">
+      <h3 class="prototipos-grid__nombre">{{ item.prototipo_nombre | escape_html }}</h3>
+      <p class="prototipos-grid__m2">({{ item.prototipo_m2 | escape_html }})</p>
+      <p class="prototipos-grid__desc">{{ item.prototipo_desc | escape_html }}</p>
+      {# amenidades recamaras #}
+      <p class="prototipos-grid__recamaras">
+        <img
+          class="prototipos-grid__img_recamaras"
+          src="{{ img_src_recamaras }}"
+          alt="{{ item.prototipo_imagen_recamaras.alt | escape_attr }}"
+          loading="{{ item.prototipo_imagen_recamaras.loading | default('lazy') }}"
+        >
+        <span class="prototipos-grid__img_recamaras_min">
+          {{ item.prototipo_amen_desc_1 | escape_html }}
+        </span><br />
+        <span class="prototipos-grid__img_recamaras_min_num">
+          {{ item.prototipo_amen_num_1 | escape_html }}
+        </span>
+      </p>
+      {# amenidades baños #}
+      <p class="prototipos-grid__recamaras">
+        <img
+          class="prototipos-grid__img_recamaras"
+          src="{{ img_src_banos }}"
+          alt="{{ item.prototipo_imagen_banos.alt | escape_attr }}"
+          loading="{{ item.prototipo_imagen_banos.loading | default('lazy') }}"
+        >
+        <span class="prototipos-grid__img_recamaras_min">
+          {{ item.prototipo_amen_desc_2 | escape_html }}
+        </span><br />
+        <span class="prototipos-grid__img_recamaras_min_num">
+          {{ item.prototipo_amen_num_2 | escape_html }}
+        </span>
+      </p>
+    </div>
+
+  {% if href %}</a>{% else %}</div>{% endif %}
+  {% endfor %}
+</div>

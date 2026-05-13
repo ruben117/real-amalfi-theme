@@ -1,0 +1,65 @@
+/* ============================================================
+   SECCIÓN: PATRIMONIO – 22 años construyendo
+   ============================================================ */
+
+/* ── Heading principal ───────────────────────────────────── */
+
+.patrimonio__heading-module h2 {
+  color: var(--heading-color-dark);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading-black);
+  line-height: 1.25;
+  margin: 0 0 2rem;
+  max-width: 320px;
+}
+
+/* ── Tarjetas ícono + texto ──────────────────────────────── */
+
+.patrimonio__stat {
+  background: var(--stat-backgroundcolor);
+  margin-bottom: .35rem;
+  margin-top: .35rem;
+  padding: .8rem;
+}
+
+.patrimonio__stat-amenidades {
+  background: var(--stat-backgroundcolor);
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  padding: .5rem;
+}
+
+/* ── Disclaimer ──────────────────────────────────────────── */
+
+.patrimonio__disclaimer-module p {
+  color: var(--text-color);
+  font-size: var(--font-size-disclaimer);
+  line-height: 1.5;
+  margin: 0rem 0 0;
+  opacity: 0.75;
+}
+p.icon-rt__subtitulo{
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* ── Columna de imagen: centrada y responsive ────────────── */
+
+.patrimonio__infografia-module img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ── Responsive – Mobile ─────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .patrimonio__heading-module h2 {
+    max-width: 100%;
+  }
+  .patrimonio__infografia-module img {
+    margin-top: 30px
+  }
+}

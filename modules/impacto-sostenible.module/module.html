@@ -1,0 +1,52 @@
+<div class="impacto-sostenible layout-{{ module.design.layout_order }}" 
+     {% if module.design.bg_image.src %}style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('{{ module.design.bg_image.src }}');"{% endif %}>
+  
+  <div class="impacto-sostenible__container">
+    
+    {# BLOQUE DE TEXTO #}
+    <div class="impacto-sostenible__text-col align-{{ module.text_content.alignment }}">
+      {% if module.text_content.title %}
+        <h2 class="impacto-sostenible__title">{{ module.text_content.title }}</h2>
+      {% endif %}
+      {% if module.text_content.description %}
+        <div class="impacto-sostenible__desc">
+          {{ module.text_content.description }}
+        </div>
+      {% endif %}
+    </div>
+
+    {# BLOQUE DE COMPARATIVA #}
+    <div class="impacto-sostenible__comparison-col">
+      <div class="impacto-sostenible__comparison-header">
+        {% if module.comparison.title %}
+          <span class="impacto-sostenible__comp-label">{{ module.comparison.title }}</span>
+        {% endif %}
+        {% if module.comparison.subtitle %}
+          <h3 class="impacto-sostenible__comp-subtitle">{{ module.comparison.subtitle }}</h3>
+        {% endif %}
+      </div>
+
+      <div class="impacto-sostenible__comparison-grid">
+        {# Sin ecotecnias #}
+        <div class="impacto-sostenible__comp-item">
+          <span class="impacto-sostenible__item-label">{{ module.comparison.label_sin }}</span>
+          <div class="impacto-sostenible__item-box box--sin">
+            {{ module.comparison.amount_sin }}
+          </div>
+        </div>
+
+        {# Con ecotecnias #}
+        <div class="impacto-sostenible__comp-item">
+          <span class="impacto-sostenible__item-label">{{ module.comparison.label_con }}</span>
+          <div class="impacto-sostenible__item-box box--con">
+            {{ module.comparison.amount_con }}
+          </div>
+          {% if module.comparison.savings_label %}
+            <span class="impacto-sostenible__savings-tag">{{ module.comparison.savings_label }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

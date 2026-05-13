@@ -1,0 +1,48 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Prototipos
+  screenshotPath: ../images/template-previews/prototipo.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--prototipo"
+%}
+
+  {# Hero – Prototipo #}
+
+  {% include_dnd_partial path="../sections/hero-prototipo-amalfi.html" %}
+
+  {# Detalles – Especificaciones del prototipo #}
+
+  {% include_dnd_partial path="../sections/prototipos-detalles.html" %}
+
+  {# Galería de imágenes del prototipo #}
+
+  {% include_dnd_partial path="../sections/prototipos-galeria.html" %}
+
+  {# Overview – Precio y distribución #}
+
+  {% include_dnd_partial path="../sections/prototipos-overview.html" %}
+
+  {# Amenidades #}
+
+  {% include_dnd_partial path="../sections/prototipos-amenidades.html" %}
+
+  {# Certificación EDGE #}
+
+  {% include_dnd_partial path="../sections/proto-edge.html" %}
+
+  {# Call to Action #}
+
+  {# {% include_dnd_partial path="../sections/call-to-action.html" %} #}
+
+  {# Contacto – Formulario #}
+
+  {% include_dnd_partial path="../sections/prototipos-contacto.html" %}
+
+{% end_dnd_area %}
+{% endblock body %}

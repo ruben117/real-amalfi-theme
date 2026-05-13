@@ -1,0 +1,53 @@
+<!--
+  templateType: section
+  label: Hero Banner – Real Amalfi
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-banner.png
+  description: "Hero de pantalla completa (100vh) con imagen de fondo, dos headings editables y texto con botones CTA."
+-->
+{% dnd_section
+  background_color="#375CA1",
+  background_image={
+    "backgroundSize": "cover",
+    "backgroundPosition": "MIDDLE_CENTER",
+    "imageUrl": get_asset_url("../images/bg-hero-amalfi.png")
+  },
+  vertical_alignment="MIDDLE",
+  padding={
+    "default": { "top": 240, "bottom": 150, "left": 200, "right": 200 },
+    "mobile":  { "top": 160, "bottom": 60, "left": 20, "right": 20 }
+  }
+%}
+
+  {# Columna de contenido: máximo 6/12 cols (50%) #}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+
+    {# Título H1 principal #}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/header",
+        label="Hero – Título H1",
+        extra_classes="hero__title-module",
+        header_tag="h1",
+        value="Departamentos en Venta en Playa del Carmen: Real Amalfi Residencial"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# Descripción + Botones CTA #}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        label="Hero – Descripción y CTAs",
+        extra_classes="hero__body-module",
+        html='<p>Vive en el Caribe Mexicano en una comunidad integral con Casa Club, seguridad 24/7 y el respaldo de la empresa líder en vivienda: Vinte.</p><div class="hero__ctas"><a href="#catalogos" class="btn-primary">Ver Prototipos</a><a href="https://wa.me/5219197470" class="btn-outline">Hablar con un Asesor</a></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+
+{% end_dnd_section %}

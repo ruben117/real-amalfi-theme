@@ -1,0 +1,89 @@
+[
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Prototipos",
+    "type": "group",
+    "repeater": true,
+    "occurrence": { "min": 1, "max": 8, "default": 4 },
+    "children": [
+      {
+        "id": "prototipo_imagen",
+        "name": "prototipo_imagen",
+        "label": "Imagen",
+        "type": "image",
+        "default": { "src": "", "alt": "", "loading": "lazy" }
+      },
+      {
+        "id": "prototipo_nombre",
+        "name": "prototipo_nombre",
+        "label": "Nombre del prototipo",
+        "type": "text",
+        "default": "Prototipo"
+      },
+      {
+        "id": "prototipo_m2",
+        "name": "prototipo_m2",
+        "label": "Metros cuadrados",
+        "type": "text",
+        "default": "00.00 m²"
+      },
+      {
+        "id": "prototipo_desc",
+        "name": "prototipo_desc",
+        "label": "Descripción",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "prototipo_enlace",
+        "name": "prototipo_enlace",
+        "label": "Enlace (página del prototipo)",
+        "type": "link",
+        "default": { "url": { "href": "" }, "open_in_new_tab": false }
+      },
+      {
+        "id": "prototipo_imagen_recamaras",
+        "name": "prototipo_imagen_recamaras",
+        "label": "Imagen",
+        "type": "image",
+        "default": { "src": "", "alt": "", "loading": "lazy" }
+      },
+      {
+        "id": "prototipo_imagen_banos",
+        "name": "prototipo_imagen_banos",
+        "label": "Imagen",
+        "type": "image",
+        "default": { "src": "", "alt": "", "loading": "lazy" }
+      },
+      {
+        "id": "prototipo_amen_desc_1",
+        "name": "prototipo_amen_desc_1",
+        "label": "Recamaras",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "prototipo_amen_num_1",
+        "name": "prototipo_amen_num_1",
+        "label": "Número de recamaras",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "prototipo_amen_desc_2",
+        "name": "prototipo_amen_desc_2",
+        "label": "Recamaras",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "prototipo_amen_num_2",
+        "name": "prototipo_amen_num_2",
+        "label": "Número de recamaras",
+        "type": "text",
+        "default": ""
+      }
+    ]
+  }
+]

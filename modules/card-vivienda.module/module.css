@@ -1,0 +1,67 @@
+.card-vivienda {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.card-vivienda__image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px; /* Ajustado según la imagen de referencia */
+  display: block;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.card-vivienda__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alineaciones */
+.align-left .card-vivienda__content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.align-center .card-vivienda__content {
+  text-align: center;
+  align-items: center;
+}
+
+.align-right .card-vivienda__content {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.card-vivienda__title {
+  font-size: 28px;
+  font-weight: var(--font-weight-heading-black, 700);
+  color: var(--heading-color-dark, #33425D);
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+}
+
+.card-vivienda__desc p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-color, #000104);
+  margin: 0;
+  max-width: 400px; /* Limitar ancho para que el quiebre de línea se parezca al de la imagen */
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .card-vivienda__title {
+    font-size: 24px;
+  }
+  
+  .card-vivienda__desc p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  /* En móvil solemos preferir centrado o izquierda si es muy pequeño */
+  .card-vivienda.align-right .card-vivienda__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

@@ -1,0 +1,94 @@
+<!--
+  templateType: section
+  label: Prototipo – Amenidades
+  isAvailableForNewContent: true
+  description: "Sección de amenidades."
+-->
+
+{% dnd_section
+  background_color="#ffffff",
+  vertical_alignment="MIDDLE",
+  padding={
+    "default": { "top": 80, "bottom": 80 },
+    "mobile":  { "top": 50, "bottom": 50 }
+  }
+%}
+
+  {% dnd_column %}
+
+    {# ── Heading ─────────────────────────────────────────────── #}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/header",
+        label="EDGE – Heading",
+        extra_classes="proto-edge__heading-module",
+        header_tag="h2",
+        value="Al elegir el Modelo Vizzini, no solo adquieres una vivienda"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# ── Descripción ─────────────────────────────────────────── #}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        label="EDGE – Descripción",
+        extra_classes="proto-edge__desc-module",
+        html='<p>84.14 m², también obtienes acceso de por vida a nuestra Casa Club, Ludoteca y Seguridad 24/7',
+        padding={
+          "default": { "bottom": 30 },
+          "mobile":  { "bottom": 30 }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+    {# ── Galería slider ─────────────────────────────────────── #}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/image-slider",
+        label="Galería – Slider",
+        extra_classes="galeria__slider-module galeria__prototipos-amenidades",
+        loop=true,
+        autoplay=false,
+        lightbox=true,
+        start_index=1,
+        slides=[
+          {
+            "image": {
+              "src": get_asset_url("../images/galeria-1.jpg"),
+              "alt": "Área de juegos infantiles",
+              "loading": "eager"
+            }
+          },
+          {
+            "image": {
+              "src": get_asset_url("../images/galeria-2.jpg"),
+              "alt": "Área de ejercicio al aire libre",
+              "loading": "lazy"
+            }
+          },
+          {
+            "image": {
+              "src": get_asset_url("../images/galeria-3.jpg"),
+              "alt": "Palapa y área de descanso",
+              "loading": "lazy"
+            }
+          }
+        ],
+        settings={
+          "slide_width": 52,
+          "inactive_scale": 88,
+          "inactive_overlay": 45,
+          "gap": 20,
+          "aspect_ratio": "4/3",
+          "border_radius": 12,
+          "arrow_size": 44
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+
+  {% end_dnd_column %}
+
+{% end_dnd_section %}

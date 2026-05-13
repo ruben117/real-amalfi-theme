@@ -1,0 +1,56 @@
+[
+  {
+    "label": "Imagen",
+    "name": "image",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "Imagen de vivienda",
+      "loading": "lazy"
+    }
+  },
+  {
+    "label": "Título",
+    "name": "title",
+    "type": "text",
+    "default": "Departamentos"
+  },
+  {
+    "label": "Descripción",
+    "name": "content",
+    "type": "richtext",
+    "default": "<p>La opción inteligente para inversionistas que buscan rentas vacacionales o de largo plazo. Practicidad y vistas increíbles.</p>"
+  },
+  {
+    "label": "Alineación del texto",
+    "name": "text_alignment",
+    "type": "choice",
+    "choices": [
+      ["left", "Izquierda"],
+      ["center", "Centro"],
+      ["right", "Derecha"]
+    ],
+    "default": "right"
+  },
+  {
+    "label": "Estilos",
+    "name": "styles",
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "label": "Espaciado superior",
+        "name": "margin_top",
+        "type": "number",
+        "display": "slider",
+        "min": 0,
+        "max": 100,
+        "default": 20,
+        "step": 1,
+        "suffix": "px"
+      }
+    ]
+  }
+]
