@@ -51,6 +51,7 @@
   width: 50%;
   float: left;
   margin:0;
+  position: relative;
 }
 .prototipos-grid__img_recamaras{
   width: 38px;
@@ -62,16 +63,29 @@
 .prototipos-grid__img_recamaras_min{
     font-size: 10px;
     float: left;
-    color: #ffffff;
+    color: #009DB0;
     margin: 10px 0 0 10px;
 }
 .prototipos-grid__img_recamaras_min_num{
   color: #ffffff;
   float: left;
   margin: -4px 0 0 10px;
+  margin: 0px 0 0 0px;
+  position: absolute;
+  left: 3em;
+}
+.prototipos-grid__img_tipo{
+  width: 25px;
+  width: 30px;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
+
+@media(min-width: 768px) and (max-width: 1080px){
+  .prototipos-grid__recamaras, .prototipos-grid__recamaras{
+    width: 100%;
+  }
+}
 
 @media (max-width: 767px) {
   .prototipos__cta-buttons {

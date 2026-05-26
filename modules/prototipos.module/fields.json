@@ -43,6 +43,13 @@
         "default": { "url": { "href": "" }, "open_in_new_tab": false }
       },
       {
+        "id": "prototipo_imagen_tipo",
+        "name": "prototipo_imagen_tipo",
+        "label": "Imagen",
+        "type": "image",
+        "default": { "src": "", "alt": "", "loading": "lazy" }
+      },
+      {
         "id": "prototipo_imagen_recamaras",
         "name": "prototipo_imagen_recamaras",
         "label": "Imagen",

@@ -82,16 +82,8 @@
 
     {% dnd_row %}
       {% dnd_module
-        path="@hubspot/linked_image",
-        label="Ubicación – Mapa",
-        extra_classes="ubicacion__mapa-module",
-        img={
-          "src": get_asset_url("../images/ubicacion-amalfi.png"),
-          "alt": "Mapa de ubicación Real Amalfi – Playa del Carmen",
-          "loading": "lazy",
-          "size_type": "auto"
-        },
-        open_in_new_tab=false
+        path="../modules/ubicacion",
+        label="Ubicación — Contenido",
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}

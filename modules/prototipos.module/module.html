@@ -2,6 +2,7 @@
   {% for item in module.items %}
   {% set img_src = item.prototipo_imagen.src if item.prototipo_imagen.src else get_asset_url("../../images/large-placeholder-image.png") %}
   {% set img_src_recamaras = item.prototipo_imagen_recamaras.src if item.prototipo_imagen_recamaras.src else get_asset_url("../../images/ico-recamaras.png") %}
+  {% set img_src_tipo = item.prototipo_imagen_tipo.src if item.prototipo_imagen_tipo.src else get_asset_url("../../images/ico-tipo.png") %}
   {% set img_src_banos = item.prototipo_imagen_banos.src if item.prototipo_imagen_banos.src else get_asset_url("../../images/ico-ico-banos.png") %}
   {% set href = item.prototipo_enlace.url.href | default('') %}
 
@@ -15,7 +16,6 @@
   {% else %}
   <div class="prototipos-grid__card" data-prototipo-card>
   {% endif %}
-
     <img
       class="prototipos-grid__img"
       src="{{ img_src }}"
@@ -24,7 +24,15 @@
     >
     <div class="prototipos-grid__overlay"></div>
     <div class="prototipos-grid__content">
-      <h3 class="prototipos-grid__nombre">{{ item.prototipo_nombre | escape_html }}</h3>
+      <h3 class="prototipos-grid__nombre">
+        <img
+          class="prototipos-grid__img_tipo"
+          src="{{ img_src_tipo }}"
+          alt="{{ item.prototipo_imagen_tipo.alt | escape_attr }}"
+          loading="{{ item.prototipo_imagen_tipo.loading | default('lazy') }}"
+        ><br />
+        {{ item.prototipo_nombre | escape_html }}
+      </h3>
       <p class="prototipos-grid__m2">({{ item.prototipo_m2 | escape_html }})</p>
       <p class="prototipos-grid__desc">{{ item.prototipo_desc | escape_html }}</p>
       {# amenidades recamaras #}
