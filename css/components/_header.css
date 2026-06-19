@@ -179,7 +179,7 @@
   transition: color 0.2s ease;
   white-space: nowrap;
 }
-
+ 
 .header__nav .menu__link:hover,
 .header__nav .menu__link:focus {
   color: #ffffff;
