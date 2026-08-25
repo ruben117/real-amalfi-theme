@@ -134,9 +134,9 @@
 .img-slider__arrow {
   align-items: center;
   background-color: transparent;
-  border: 2px solid var(--primary-color-black);
+  border: 2px solid var(--heading-color-dark);
   border-radius: 50% !important;
-  color: var(--primary-color-black);
+  color: var(--heading-color-dark);
   cursor: pointer;
   display: flex;
   flex-shrink: 0;
@@ -149,8 +149,8 @@
 
 .img-slider__arrow:hover,
 .img-slider__arrow:focus {
-  background-color: var(--primary-color-black);
-  border-color: var(--primary-color-black);
+  background-color: var(--heading-color-dark);
+  border-color: var(--heading-color-dark);
   color: #ffffff;
   transform: scale(1.07);
 }

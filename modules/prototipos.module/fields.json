@@ -90,6 +90,13 @@
         "label": "Número de recamaras",
         "type": "text",
         "default": ""
+      },
+      {
+        "id": "prototipo_agotado",
+        "name": "prototipo_agotado",
+        "label": "¿Está agotado?",
+        "type": "boolean",
+        "default": false
       }
     ]
   }

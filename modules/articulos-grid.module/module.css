@@ -72,6 +72,8 @@
 
 .art-grid__title a {
   color: var(--heading-color-dark);
+  font-weight: var(--font-weight-heading-black);
+  font-size: var(--font-size-third);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -95,7 +97,7 @@
   color: var(--heading-color-dark, #E0001A);
   display: inline-flex;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading-black);
   gap: 0.375rem;
   text-decoration: none;
   transition: gap 0.2s ease;

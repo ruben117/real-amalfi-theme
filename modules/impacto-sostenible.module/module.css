@@ -2,7 +2,7 @@
   background-color: #000;
   background-size: cover;
   background-position: center;
-  padding: 80px 40px;
+  padding: 80px 100px 60px;
   color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -14,6 +14,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 40px;
 }
@@ -29,15 +30,15 @@
 }
 
 .impacto-sostenible__title {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-heading-black);
   margin: 0 0 20px 0;
   color: #ffffff;
-  line-height: 1.2;
+  line-height: 1em;
 }
 
 .impacto-sostenible__desc p {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 1.5;
   margin: 0;
   opacity: 0.9;
@@ -65,7 +66,7 @@
 }
 
 .impacto-sostenible__comp-label {
-  font-size: 14px;
+  font-size: var(--font-size-base);
   text-transform: none;
   display: block;
   margin-bottom: 4px;
@@ -75,7 +76,7 @@
 .impacto-sostenible__comp-subtitle {
   color: #ffffff;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading-black);
   margin: 0;
 }
 
@@ -93,33 +94,36 @@
 }
 
 .impacto-sostenible__item-label {
-  font-size: 14px;
+  font-size: var(--font-size-base-sup);
   font-weight: 400;
 }
-
 .impacto-sostenible__item-box {
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: var(--font-size-third);
+    font-weight: 600;
+    letter-spacing: .01em;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease, transform .15s ease;
+    text-align: center;
 }
 
 .box--sin {
-  background-color: #8D735C; /* Tono café de la imagen */
+  background-color: var(--primary-color); /* Tono café de la imagen */
   color: #ffffff;
 }
 
 .box--con {
-  background-color: #69B34C; /* Tono verde de la imagen */
+  background-color: #7bba58; /* Tono verde de la imagen */
   color: #ffffff;
 }
 
 .impacto-sostenible__savings-tag {
   display: block;
   text-align: center;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--font-weight-heading-black);
+  font-size: var(--font-size-base-sup);
   margin-top: 8px;
 }
 

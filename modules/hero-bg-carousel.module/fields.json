@@ -1,0 +1,92 @@
+[
+  {
+    "id": "slides",
+    "name": "slides",
+    "label": "Imágenes de Fondo",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 10,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "image",
+        "name": "image",
+        "label": "Imagen",
+        "type": "image",
+        "required": true,
+        "default": {
+          "alt": "Imagen de fondo carrusel",
+          "loading": "eager"
+        }
+      }
+    ],
+    "default": [
+      {
+        "image": {
+          "src": "../../images/bg-hero-amalfi.png",
+          "alt": "Real Amalfi Hero 1"
+        }
+      },
+      {
+        "image": {
+          "src": "../../images/header-amalfi-desarrollos.png",
+          "alt": "Real Amalfi Hero 2"
+        }
+      },
+      {
+        "image": {
+          "src": "../../images/bg-prototipos-amalfi.png",
+          "alt": "Real Amalfi Hero 3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "autoplay",
+    "name": "autoplay",
+    "label": "Reproducción automática",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "id": "autoplay_delay",
+    "name": "autoplay_delay",
+    "label": "Intervalo de autoplay (ms)",
+    "type": "number",
+    "default": 5000,
+    "min": 1000,
+    "max": 20000
+  },
+  {
+    "id": "transition_type",
+    "name": "transition_type",
+    "label": "Tipo de transición",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+      ["fade", "Desvanecimiento (Fade)"],
+      ["slide", "Desplazamiento horizontal (Slide)"]
+    ],
+    "default": "fade"
+  },
+  {
+    "id": "overlay",
+    "name": "overlay",
+    "label": "Capa de superposición (Overlay)",
+    "type": "group",
+    "children": [
+      {
+        "id": "color",
+        "name": "color",
+        "label": "Color del overlay",
+        "type": "color",
+        "default": {
+          "color": "#000000",
+          "opacity": 40
+        }
+      }
+    ]
+  }
+]

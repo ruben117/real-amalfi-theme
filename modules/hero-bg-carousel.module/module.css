@@ -1,0 +1,98 @@
+/* ── Estilos del Carrusel de Fondo ── */
+
+/* Reglas automáticas para la sección DnD contenedora */
+.dnd-section:has(.hero-bg-carousel) {
+  position: relative !important;
+  background-image: none !important; /* Desactiva la imagen estática de fondo */
+}
+
+/* Forzar que todos los contenedores directos del carrusel sean estáticos
+   para que no limiten el tamaño absoluto del carrusel al tamaño de su fila (de 0px alto) */
+.dnd-section:has(.hero-bg-carousel) .row-fluid:has(.hero-bg-carousel),
+.dnd-section:has(.hero-bg-carousel) .dnd-column:has(.hero-bg-carousel),
+.dnd-section:has(.hero-bg-carousel) .dnd-row:has(.hero-bg-carousel),
+.dnd-section:has(.hero-bg-carousel) [class*="hs_cos_wrapper_type_"]:has(.hero-bg-carousel),
+.dnd-section:has(.hero-bg-carousel) [id^="hs_cos_wrapper_"]:has(.hero-bg-carousel) {
+  position: static !important;
+}
+
+/* Asegurar que las columnas y filas de contenido que NO tienen el carrusel se mantengan sobre él */
+.dnd-section:has(.hero-bg-carousel) .row-fluid:not(:has(.hero-bg-carousel)),
+.dnd-section:has(.hero-bg-carousel) .dnd-column:not(:has(.hero-bg-carousel)),
+.dnd-section:has(.hero-bg-carousel) .dnd-row:not(:has(.hero-bg-carousel)) {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Contenedor principal del carrusel */
+.hero-bg-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none; /* No interceptar clics sobre botones */
+}
+
+/* Capa de overlay */
+.hero-bg-carousel__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* Track de las diapositivas */
+.hero-bg-carousel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Estilo base de cada diapositiva */
+.hero-bg-carousel__slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Transición: Desvanecimiento (Fade)
+────────────────────────────────────────────────────────── */
+.hero-bg-carousel--fade .hero-bg-carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 1;
+}
+
+.hero-bg-carousel--fade .hero-bg-carousel__slide.is-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Transición: Desplazamiento (Slide)
+────────────────────────────────────────────────────────── */
+.hero-bg-carousel--slide .hero-bg-carousel__track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-bg-carousel--slide .hero-bg-carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}

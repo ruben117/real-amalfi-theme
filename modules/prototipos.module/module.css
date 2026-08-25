@@ -52,6 +52,18 @@
   transform: scale(1.06);
 }
 
+/* ── Agotado Badge ─────────────────────────────────────────── */
+
+.prototipos-grid__agotado {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 149px;
+  height: auto;
+  pointer-events: none;
+}
+
 /* ── Overlay ───────────────────────────────────────────────── */
 
 .prototipos-grid__overlay {

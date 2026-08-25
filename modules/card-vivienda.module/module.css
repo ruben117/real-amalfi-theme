@@ -64,4 +64,7 @@
     align-items: flex-start;
     text-align: left;
   }
+  .card-vivienda {
+    margin-bottom: 1.2rem;
+  }
 }

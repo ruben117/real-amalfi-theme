@@ -10,13 +10,13 @@
   background_color="#1c2846",
   background_image={
     "backgroundSize": "cover",
-    "backgroundPosition": "MIDDLE_CENTER",
-    "imageUrl": get_asset_url("../images/bg-prototipos-amalfi.png")
+    "backgroundPosition": "TOP_CENTER",
+    "imageUrl": get_asset_url("../images/bg-modelo-vizzini.jpg")
   },
   vertical_alignment="BOTTOM",
   padding={
-    "default": { "top": 140, "bottom": 80, "left": 30, "right": 30  },
-    "mobile":  { "top": 0, "bottom": 50, "left": 30, "right": 30 }
+    "default": { "top": 400, "bottom": 120, "left": 30, "right": 30  },
+    "mobile":  { "top": 200, "bottom": 50, "left": 30, "right": 30 }
   }
 %}
 
@@ -60,26 +60,62 @@
 
     {% end_dnd_row %}
 
-{% end_dnd_column %}
-
-
-{# ── Columna derecha: imagen ─────────────────────────── #}
-{% dnd_column offset=7, width=5 %}
+    {# Botón CTA – nativo del tema (button.module) #}
     {% dnd_row %}
       {% dnd_module
-        path="@hubspot/linked_image",
-        label="Patrimonio – Infografía",
-        extra_classes="patrimonio__infografia-module",
-        img={
-          "src": get_asset_url("../images/modelo-vizzini.jpg"),
-          "alt": "22 años construyendo el patrimonio de México – infografía de plusvalía",
-          "loading": "lazy",
-          "size_type": "auto"
+        path="../modules/button",
+        label="Hero – CTA",
+        extra_classes="hero-prototipo__cta-module",
+        button_text="Recorrido 360",
+        link={
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
         },
-        open_in_new_tab=false
+        styles={
+          "background": {
+            "color": {
+              "color": "#B48F72",
+              "opacity": 100
+            }
+          },
+          "text": {
+            "font": {
+              "color": "#ffffff",
+              "size": 16,
+              "size_unit": "px",
+              "bold": true,
+              "styles": { "font-weight": "bold" }
+            }
+          },
+          "corner": {
+            "radius": 4
+          },
+          "spacing": {
+            "spacing": {
+              "padding": {
+                "top":    {"value": 14, "units": "px"},
+                "bottom": {"value": 14, "units": "px"},
+                "left":   {"value": 32, "units": "px"},
+                "right":  {"value": 32, "units": "px"}
+              }
+            }
+          },
+          "alignment": {
+            "alignment": {
+              "horizontal_align": "LEFT"
+            }
+          }
+        }
       %}
       {% end_dnd_module %}
     {% end_dnd_row %}
+
 {% end_dnd_column %}
+
+
 
 {% end_dnd_section %}

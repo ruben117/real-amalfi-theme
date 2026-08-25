@@ -1,0 +1,40 @@
+{# ── Hero Background Carousel ──
+   Módulo de fondo absoluto para secciones DND de HubSpot.
+   Posiciona un carrusel de imágenes detrás del contenido.
+#}
+
+{% set slide_count = module.slides | length %}
+
+{% if slide_count > 0 %}
+<div 
+  class="hero-bg-carousel hero-bg-carousel--{{ module.transition_type }}"
+  data-hero-bg-carousel
+  data-autoplay="{{ module.autoplay }}"
+  data-autoplay-delay="{{ module.autoplay_delay }}"
+  data-transition-type="{{ module.transition_type }}"
+  aria-hidden="true"
+>
+  {# Overlay para asegurar contraste de textos #}
+  {% if module.overlay.color.color %}
+    {% set opacity_val = module.overlay.color.opacity is defined ? module.overlay.color.opacity : 40 %}
+    {% set opacity_decimal = opacity_val / 100 %}
+    <div 
+      class="hero-bg-carousel__overlay" 
+      style="background-color: {{ module.overlay.color.color }}; opacity: {{ opacity_decimal }};"
+    ></div>
+  {% endif %}
+
+  {# Diapositivas #}
+  <div class="hero-bg-carousel__track" data-hero-bg-track>
+    {% for slide in module.slides %}
+      {% if slide.image.src %}
+        <div 
+          class="hero-bg-carousel__slide{% if loop.first %} is-active{% endif %}"
+          data-slide-index="{{ loop.index0 }}"
+          style="background-image: url('{{ slide.image.src | escape_url }}');"
+        ></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
