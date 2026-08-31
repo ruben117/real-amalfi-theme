@@ -1,9 +1,24 @@
 {
-  "global" : false,
-  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "categories" : [ "body_content" ],
-  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 220521670940,
-  "label" : "Logos de certificaciones",
-  "is_available_for_new_content" : true
+  "label": "Logos de certificaciones",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "host_template_types": [
+    "PAGE",
+    "BLOG_POST",
+    "BLOG_LISTING"
+  ],
+  "icon": "",
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [
+    "logos",
+    "certificaciones",
+    "footer"
+  ],
+  "is_available_for_new_content": true,
+  "categories": [
+    "body_content"
+  ]
 }

@@ -46,6 +46,7 @@
   display: block;
   height: auto;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .footer__logos .footer_logo_madeira img,
@@ -202,3 +203,4 @@
     gap: 1.5rem;
   }
 }
+
