@@ -114,7 +114,6 @@
 /* Precio H2 */
 .dnd-module:has(.proto-overview__content-module) h2 {
   color: var(--heading-color-dark);
-  font-size: var(--font-size-subheading);
   font-weight: var(--font-weight-heading-black);
   line-height: 1.1;
   padding-bottom: 1rem;

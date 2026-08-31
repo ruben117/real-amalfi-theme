@@ -1,63 +1,96 @@
-[
-  {
-    "name": "phone_number",
-    "label": "Número de WhatsApp",
-    "type": "text",
-    "required": true,
-    "default": "524427084371",
-    "help_text": "Número completo con código de país, sin + ni espacios. Ej: 525512345678"
-  },
-  {
-    "name": "button_text",
-    "label": "Texto del botón",
-    "type": "text",
-    "default": "Contáctanos"
-  },
-  {
-    "name": "custom_message",
-    "label": "Mensaje predefinido (opcional)",
-    "type": "text",
-    "default": "¡Quiero más información de las casas y departamentos en Real Madeira!",
-    "help_text": "Se enviará como texto inicial al abrir WhatsApp. Déjalo vacío para omitirlo."
-  },
-  {
-    "name": "position",
-    "label": "Posición",
-    "type": "choice",
-    "required": true,
-    "default": "right",
-    "choices": [
-      ["right", "Derecha"],
-      ["left",  "Izquierda"]
-    ]
-  },
-  {
-    "name": "styles",
-    "label": "Estilos",
-    "type": "group",
-    "tab": "STYLE",
-    "children": [
-      {
-        "name": "bubble_color",
-        "label": "Color de fondo",
-        "type": "color",
-        "default": { "color": "#25D366", "opacity": 100 }
-      },
-      {
-        "name": "text_color",
-        "label": "Color de texto e ícono",
-        "type": "color",
-        "default": { "color": "#ffffff", "opacity": 100 }
-      },
-      {
-        "name": "bottom_offset",
-        "label": "Separación desde abajo (px)",
-        "type": "number",
-        "min": 10,
-        "max": 120,
-        "step": 1,
-        "default": 32
-      }
-    ]
-  }
-]
+[ {
+  "id" : "phone_number",
+  "name" : "phone_number",
+  "label" : "Número de WhatsApp",
+  "help_text" : "Número completo con código de país, sin + ni espacios. Ej: 525512345678",
+  "required" : true,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "524427084371"
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "label" : "Texto del botón",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Contáctanos"
+}, {
+  "id" : "custom_message",
+  "name" : "custom_message",
+  "label" : "Mensaje predefinido (opcional)",
+  "help_text" : "Se enviará como texto inicial al abrir WhatsApp. Déjalo vacío para omitirlo.",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "¡Quiero más información de las casas y departamentos en Real Madeira!"
+}, {
+  "id" : "position",
+  "name" : "position",
+  "label" : "Posición",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "right", "Derecha" ], [ "left", "Izquierda" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "right"
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "label" : "Estilos",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.bubble_color",
+    "name" : "bubble_color",
+    "label" : "Color de fondo",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#25D366",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "styles.text_color",
+    "name" : "text_color",
+    "label" : "Color de texto e ícono",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "styles.bottom_offset",
+    "name" : "bottom_offset",
+    "label" : "Separación desde abajo (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 10,
+    "max" : 120,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 32
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -1,14 +1,9 @@
 {
-  "label": "FAQ – Preguntas Frecuentes",
-  "css_assets": [],
-  "external_js": [],
-  "global": false,
-  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
-  "icon": "",
-  "js_assets": [],
-  "other_assets": [],
-  "smart_type": "NOT_SMART",
-  "tags": ["Real Amalfi"],
-  "is_available_for_new_content": true,
-  "categories": ["body_content"]
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "categories" : [ "body_content" ],
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 212827993999,
+  "label" : "FAQ – Preguntas Frecuentes",
+  "is_available_for_new_content" : true
 }

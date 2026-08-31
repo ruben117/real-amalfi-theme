@@ -37,9 +37,9 @@
 
 .hero-prototipo__title-module h1 {
   color: var(--heading-color-dark);
-  font-size: clamp(38px, 2.8vw, 50px);
+  font-size: 2rem;
   font-weight: var(--font-weight-heading);
-  line-height: 1.1;
+  line-height: 1;
   margin: 0 0 1.25rem;
   max-width: 560px;
 }

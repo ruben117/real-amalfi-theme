@@ -7,6 +7,10 @@
   --secondary-color: #2E3747;
   --primary-color-black: #AD8937;
   --accent-color: #AD8937;
+  --primary-color: #AD8937;
+  --secondary-color: #2E3747;
+  --primary-color-black: #AD8937;
+  --accent-color: #AD8937;
   --text-color: #000104;
   --text-color-blog: #8B929F;
   --heading-color: #B48F72;
@@ -14,8 +18,9 @@
   --stat-backgroundcolor: #F3FEFF;
   --font-family-base: 'Barlow', 'Roboto', sans-serif;
   --font-size-base: 16px;
+  --font-size-base-sup: 14px;
   --font-size-disclaimer:10px;
-  --font-size-heading: clamp(22px, 2vw, 29px);
+  --font-size-heading: clamp(30px, 2vw, 29px);
   --font-size-subheading: 40px;
   --font-size-button: 18px;
   --letter-spacing-base: 5px;

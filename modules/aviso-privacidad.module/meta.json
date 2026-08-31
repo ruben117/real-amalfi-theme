@@ -1,13 +1,9 @@
 {
-  "label": "Aviso de Privacidad",
-  "css_assets": [],
-  "external_js": [],
-  "global": false,
-  "host_template_types": ["PAGE"],
-  "js_assets": [],
-  "other_assets": [],
-  "smart_type": "NOT_SMART",
-  "tags": ["aviso", "privacidad", "legal"],
-  "is_available_for_new_content": true,
-  "categories": ["body_content"]
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "categories" : [ "body_content" ],
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 216452861484,
+  "label" : "Aviso de Privacidad",
+  "is_available_for_new_content" : true
 }

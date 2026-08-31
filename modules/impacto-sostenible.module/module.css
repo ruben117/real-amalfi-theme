@@ -14,7 +14,6 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  align-items: start;
   justify-content: space-between;
   gap: 40px;
 }
@@ -26,12 +25,12 @@
 
 /* Columna de Texto */
 .impacto-sostenible__text-col {
-  flex: 1;
+  flex: 2 1 0;
 }
 
 .impacto-sostenible__title {
   font-size: var(--font-size-subheading);
-  font-weight: var(--font-weight-heading-black);
+  font-weight: 400;
   margin: 0 0 20px 0;
   color: #ffffff;
   line-height: 1em;

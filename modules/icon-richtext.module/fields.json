@@ -1,99 +1,129 @@
-[
-  {
-    "id": "icon",
-    "name": "icon",
-    "label": "Ícono (SVG / imagen)",
-    "type": "image",
-    "required": false,
-    "default": {
-      "alt": "",
-      "loading": "lazy"
-    }
-  },
-  {
-    "id": "icon_position",
-    "name": "icon_position",
-    "label": "Posición del ícono",
-    "type": "choice",
-    "display": "radio",
-    "choices": [
-      ["top",    "Arriba"],
-      ["left",   "Izquierda"],
-      ["right",  "Derecha"],
-      ["bottom", "Abajo"]
-    ],
-    "default": "left"
-  },
-  {
-    "id": "icon_size",
-    "name": "icon_size",
-    "label": "Tamaño del ícono (px)",
-    "type": "number",
-    "default": 32,
-    "min": 16,
-    "max": 200
-  },
-  {
-    "id": "icon_gap",
-    "name": "icon_gap",
-    "label": "Espacio entre ícono y texto (px)",
-    "type": "number",
-    "default": 16,
-    "min": 0,
-    "max": 64
-  },
-  {
-    "id": "content",
-    "name": "content",
-    "label": "Contenido",
-    "type": "richtext",
-    "default": "<p class=\"icon-rt__title\"><strong>Título</strong> del bloque</p><p class=\"icon-rt__desc\">Descripción del beneficio o característica que representa este ícono.</p>"
-  },
-  {
-    "id": "styles",
-    "name": "styles",
-    "label": "Estilos del ícono",
-    "type": "group",
-    "tab": "STYLE",
-    "children": [
-      {
-        "id": "icon_bg_color",
-        "name": "icon_bg_color",
-        "label": "Color de fondo del ícono",
-        "type": "color",
-        "default": { "color": "#B48F72", "opacity": 100 }
-      },
-      {
-        "id": "icon_bg_padding",
-        "name": "icon_bg_padding",
-        "label": "Padding del fondo (px)",
-        "type": "number",
-        "default": 15,
-        "min": 0,
-        "max": 48
-      },
-      {
-        "id": "icon_border_radius",
-        "name": "icon_border_radius",
-        "label": "Radio del borde (px)",
-        "type": "number",
-        "default": 10,
-        "min": 0,
-        "max": 100
-      },
-      {
-        "id": "vertical_align",
-        "name": "vertical_align",
-        "label": "Alineación vertical del ícono",
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          ["flex-start", "Arriba"],
-          ["center",     "Centro"],
-          ["flex-end",   "Abajo"]
-        ],
-        "default": "flex-start"
-      }
-    ]
+[ {
+  "id" : "icon",
+  "name" : "icon",
+  "label" : "Ícono (SVG / imagen)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "alt" : "",
+    "loading" : "lazy"
   }
-]
+}, {
+  "id" : "icon_position",
+  "name" : "icon_position",
+  "label" : "Posición del ícono",
+  "required" : false,
+  "locked" : false,
+  "display" : "radio",
+  "choices" : [ [ "top", "Arriba" ], [ "left", "Izquierda" ], [ "right", "Derecha" ], [ "bottom", "Abajo" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "left"
+}, {
+  "id" : "icon_size",
+  "name" : "icon_size",
+  "label" : "Tamaño del ícono (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 16,
+  "max" : 200,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 32
+}, {
+  "id" : "icon_gap",
+  "name" : "icon_gap",
+  "label" : "Espacio entre ícono y texto (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 0,
+  "max" : 64,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 16
+}, {
+  "id" : "content",
+  "name" : "content",
+  "label" : "Contenido",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p class=\"icon-rt__title\"><strong>Título</strong> del bloque</p><p class=\"icon-rt__desc\">Descripción del beneficio o característica que representa este ícono.</p>"
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "label" : "Estilos del ícono",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "icon_bg_color",
+    "name" : "icon_bg_color",
+    "label" : "Color de fondo del ícono",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#B48F72",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "icon_bg_padding",
+    "name" : "icon_bg_padding",
+    "label" : "Padding del fondo (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 0,
+    "max" : 48,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 15
+  }, {
+    "id" : "icon_border_radius",
+    "name" : "icon_border_radius",
+    "label" : "Radio del borde (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 10
+  }, {
+    "id" : "vertical_align",
+    "name" : "vertical_align",
+    "label" : "Alineación vertical del ícono",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "flex-start", "Arriba" ], [ "center", "Centro" ], [ "flex-end", "Abajo" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "flex-start"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

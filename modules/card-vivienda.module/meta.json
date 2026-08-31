@@ -1,11 +1,8 @@
 {
-  "global": false,
-  "host_template_types": [
-    "PAGE"
-  ],
-  "is_available_for_new_content": true,
-  "label": "Card Vivienda (Opciones)",
-  "icons": {
-    "fontawesome": "house-user"
-  }
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 212825089839,
+  "label" : "Card Vivienda (Opciones)",
+  "is_available_for_new_content" : true
 }

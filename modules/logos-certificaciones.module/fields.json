@@ -11,10 +11,22 @@
     "type": "choice",
     "default": "blanco",
     "choices": [
-      ["ninguno", "Ninguno"],
-      ["blanco", "Blanco"],
-      ["negro", "Negro"],
-      ["escala_grises", "Escala de grises"]
+      [
+        "ninguno",
+        "Ninguno"
+      ],
+      [
+        "blanco",
+        "Blanco"
+      ],
+      [
+        "negro",
+        "Negro"
+      ],
+      [
+        "escala_grises",
+        "Escala de grises"
+      ]
     ]
   },
   {
@@ -41,7 +53,10 @@
     "name": "bg_color",
     "label": "Color de fondo",
     "type": "color",
-    "default": { "color": "#000000", "opacity": 100 }
+    "default": {
+      "color": "#000000",
+      "opacity": 100
+    }
   },
   {
     "name": "logos",
