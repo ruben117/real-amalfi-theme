@@ -1,28 +1,44 @@
-[
-  {
-    "label": "Imagen del mapa (miniatura)",
-    "name": "mapa",
-    "type": "image",
-    "responsive": true,
-    "resizable": true,
-    "show_loading": true,
-    "default": { "src": "", "alt": "Mapa de ubicación de Real Madeira" }
-  },
-  {
-    "label": "Imagen del mapa (lightbox, alta resolución)",
-    "name": "mapa_lightbox",
-    "type": "image",
-    "responsive": false,
-    "resizable": false,
-    "show_loading": false,
-    "default": { "src": "", "alt": "" }
-  },
-  {
-    "label": "Columnas del grid",
-    "name": "cols",
-    "type": "number",
-    "min": 1,
-    "max": 4,
-    "default": 2
+[ {
+  "id" : "mapa",
+  "name" : "mapa",
+  "label" : "Imagen del mapa (miniatura)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : true,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Mapa de ubicación de Real Madeira"
   }
-]
+}, {
+  "id" : "mapa_lightbox",
+  "name" : "mapa_lightbox",
+  "label" : "Imagen del mapa (lightbox, alta resolución)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
+  }
+}, {
+  "id" : "cols",
+  "name" : "cols",
+  "label" : "Columnas del grid",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1,
+  "max" : 4,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 2
+} ]

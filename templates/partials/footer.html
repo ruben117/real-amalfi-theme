@@ -2,38 +2,96 @@
   templateType: global_partial
   label: Footer
 -->
-<footer class="footer">
+<footer class="footer" aria-label="Pie de página">
+
+  {# ── Footer top: logos de certificaciones ─────────────────── #}
+  {% module "footer_certificaciones"
+    path="../../modules/logos-certificaciones",
+    label="Logos de certificaciones",
+    logo_altura=70,
+    logo_filtro="blanco",
+    logo_opacidad=85,
+    gap=48,
+    padding_v=28,
+    bg_color={ "color": "#000000", "opacity": 100 },
+    logos=[
+      { "logo_alt": "Grupo Vinte",               "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte.png"),              "alt": "Grupo Vinte" } },
+      { "logo_alt": "Great Place To Work",        "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte-great-to-place-to-work.png"), "alt": "Great Place To Work" } },
+      { "logo_alt": "ESR",                        "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte-esr.png"),                "alt": "ESR" } },
+      { "logo_alt": "Edge",                       "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte-edge.png"),               "alt": "Edge" } },
+      { "logo_alt": "Súper Empresas 2025",        "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte-super-empresas.png"),     "alt": "Súper Empresas 2025" } },
+      { "logo_alt": "Mejores Empresas Mexicanas", "logo_imagen": { "src": get_asset_url("../../images/certificaciones-vinte-mejores-empresas.png"),   "alt": "Mejores Empresas Mexicanas" } }
+    ]
+  %}
+
   <div class="footer__inner content-wrapper">
 
-    {# ── Row 1: Logos (left) + Address (right) ── #}
-    <div class="footer__main">
+    <div class="footer__row">
 
-      <div class="footer__logos">
-        <img
-          class="footer__logo footer__logo--amalfi"
-          src="{{ get_asset_url('../../images/logo-real-amalfi-gris-footer.png') }}"
-          alt="Real Amalfi"
-        >
-        <img
-          class="footer__logo footer__logo--vinte"
-          src="{{ get_asset_url('../../images/logo-vinte-footer.png') }}"
-          alt="Vinte"
-        >
+      {# ── Columna 1: Logos + datos legales ─────────────────── #}
+      <div class="footer__col footer__col--brand">
+
+        <div class="footer__logos">
+          {% module "footer_logo_amalfi"
+            path="@hubspot/logo",
+            label="Logo — Real Amalfi",
+            img={
+              "override_inherited_src": true,
+              "src": get_asset_url("../../images/logo-real-amalfi-blanco.png"),
+              "alt": "Real Amalfi – Comunidad Vinte",
+              "width": 110,
+              "loading": "lazy"
+            }
+          %}
+          {% module "footer_logo_vinte"
+            path="@hubspot/logo",
+            label="Logo — Vinte",
+            img={
+              "override_inherited_src": true,
+              "src": get_asset_url("../../images/logo-vinte-footer.png"),
+              "alt": "Vinte",
+              "width": 120,
+              "loading": "lazy"
+            }
+          %}
+        </div>
+
+        <address class="footer__address">
+          {% module "footer_address"
+            path="@hubspot/rich_text",
+            label="Dirección y datos legales",
+            html="<p>PROMOTORA DE VIVIENDAS INTEGRALES SA DE CV<br>No. Reg. 3697-2022 de fecha 23 de agosto 2022<br>Av Real del Sol, Mz.16, Lt. 1, Real del Sol, Ojo de Agua, 55770, Tecámac, Estado de México</p><p><a href='https://www.vinte.com.mx/privacidad?hsLang=es-mx'><strong>Aviso de privacidad</strong></a></p><p>Copyright {{ year }} todos los derechos reservados</p>"
+          %}
+        </address>
+
       </div>
 
-      <address class="footer__address">
-        © {{ year }} , Corporativo Vinte © Vinte 2022. Todos los derechos reservados. PROMOTORA DE VIVIENDAS INTEGRALES SA DE CV, AVENIDA VIA REAL MZ. 16 LT. 1 LOCAL 1, FRACCIONAMIENTO REAL DEL SOL, TECAMAC, MEXICO 55770, México, Teléfono: 5550107360.
-      </address>
+      {# ── Columna 2: Oficina de Ventas ──────────────────────── #}
+      <div class="footer__col footer__col--ventas">
+        {% module "footer_ventas"
+          path="@hubspot/rich_text",
+          label="Oficina de Ventas",
+          html="<h4>Oficina de Ventas</h4><p>Av. Paseo del Mayab Mz. 22 Lt.2<br>Playa del Carmen, Quintana Roo<br>C.P. 77714<br>Tel. (55) 984 110 5050</p><p>Horario de atención:<br>Lunes a domingo de 09:00 a 19:00 hrs.</p><p>Email: <a href='mailto:tucasaodepa@vinte.com'>tucasaodepa@vinte.com</a></p>"
+        %}
+      </div>
 
-    </div>
+      {# ── Columna 3: Quejas y sugerencias + RRSS ───────────── #}
+      <div class="footer__col footer__col--quejas">
+        {% module "footer_quejas"
+          path="@hubspot/rich_text",
+          label="Quejas y sugerencias",
+          html="<h4>Quejas y sugerencias</h4><p>Tel. 800 841 3606</p><p>Horario de atención:<br>Lunes a domingo de 09:30 a 19:30 hrs.</p><p>Email: <a href='mailto:hola@vinte.com'>hola@vinte.com</a></p>"
+        %}
+        {% module "footer_social"
+          path="@hubspot/social_follow",
+          label="Redes sociales"
+        %}
+      </div>
 
-    {# ── Row 2: Legal / copyright ── #}
-    <div class="footer__legal">
-      <span>© {{ year }} Real Amalfi – Comunidad Vinte. Exclusividad Garantizada. | <a href="https://www.vinte.com.mx/privacidad" target="_blank">Aviso de privacidad</a></span>
     </div>
 
   </div>
-  {% end_dnd_area %}
   {# WhatsApp Floating Bubble — fuera del DnD, position:fixed en CSS #}
   {% module "whatsapp_bubble" path="../../modules/whatsapp-bubble" %}
 </footer>
+

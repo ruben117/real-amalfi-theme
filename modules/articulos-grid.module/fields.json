@@ -1,93 +1,132 @@
-[
-  {
-    "id": "articles",
-    "name": "articles",
-    "label": "Artículos",
-    "type": "group",
-    "occurrence": { "min": 1, "max": 12, "default": 3 },
-    "children": [
-      {
-        "id": "image",
-        "name": "image",
-        "label": "Imagen",
-        "type": "image",
-        "required": false,
-        "default": { "alt": "", "loading": "lazy" }
-      },
-      {
-        "id": "date",
-        "name": "date",
-        "label": "Fecha",
-        "type": "text",
-        "default": "dic 2, 2025"
-      },
-      {
-        "id": "title",
-        "name": "title",
-        "label": "Título",
-        "type": "text",
-        "default": "Título del artículo"
-      },
-      {
-        "id": "excerpt",
-        "name": "excerpt",
-        "label": "Extracto",
-        "type": "text",
-        "default": "Breve descripción del artículo que invita al lector a conocer más."
-      },
-      {
-        "id": "link",
-        "name": "link",
-        "label": "Enlace del artículo",
-        "type": "link",
-        "default": {
-          "url": { "href": "#", "type": "EXTERNAL" },
-          "open_in_new_tab": false
-        }
-      }
-    ]
+[ {
+  "id" : "articles",
+  "name" : "articles",
+  "label" : "Artículos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 12,
+    "sorting_label_field" : null,
+    "default" : 3
   },
-  {
-    "id": "read_more_text",
-    "name": "read_more_text",
-    "label": "Texto del enlace 'Leer más'",
-    "type": "text",
-    "default": "Leer más"
-  },
-  {
-    "id": "columns",
-    "name": "columns",
-    "label": "Columnas",
-    "type": "choice",
-    "display": "radio",
-    "choices": [
-      ["2", "2 columnas"],
-      ["3", "3 columnas"],
-      ["4", "4 columnas"]
-    ],
-    "default": "3"
-  },
-  {
-    "id": "image_ratio",
-    "name": "image_ratio",
-    "label": "Relación de aspecto de imagen",
-    "type": "choice",
-    "display": "select",
-    "choices": [
-      ["16/9", "16:9 — Paisaje"],
-      ["3/2",  "3:2"],
-      ["4/3",  "4:3"],
-      ["1/1",  "1:1 — Cuadrado"]
-    ],
-    "default": "16/9"
-  },
-  {
-    "id": "image_radius",
-    "name": "image_radius",
-    "label": "Radio de bordes de imagen (px)",
-    "type": "number",
-    "default": 8,
-    "min": 0,
-    "max": 24
-  }
-]
+  "children" : [ {
+    "id" : "image",
+    "name" : "image",
+    "label" : "Imagen",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "date",
+    "name" : "date",
+    "label" : "Fecha",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "dic 2, 2025"
+  }, {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Título",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Título del artículo"
+  }, {
+    "id" : "excerpt",
+    "name" : "excerpt",
+    "label" : "Extracto",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Breve descripción del artículo que invita al lector a conocer más."
+  }, {
+    "id" : "link",
+    "name" : "link",
+    "label" : "Enlace del artículo",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+}, {
+  "id" : "read_more_text",
+  "name" : "read_more_text",
+  "label" : "Texto del enlace 'Leer más'",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Leer más"
+}, {
+  "id" : "columns",
+  "name" : "columns",
+  "label" : "Columnas",
+  "required" : false,
+  "locked" : false,
+  "display" : "radio",
+  "choices" : [ [ "2", "2 columnas" ], [ "3", "3 columnas" ], [ "4", "4 columnas" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "3"
+}, {
+  "id" : "image_ratio",
+  "name" : "image_ratio",
+  "label" : "Relación de aspecto de imagen",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "16/9", "16:9 — Paisaje" ], [ "3/2", "3:2" ], [ "4/3", "4:3" ], [ "1/1", "1:1 — Cuadrado" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "16/9"
+}, {
+  "id" : "image_radius",
+  "name" : "image_radius",
+  "label" : "Radio de bordes de imagen (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 0,
+  "max" : 24,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 8
+} ]

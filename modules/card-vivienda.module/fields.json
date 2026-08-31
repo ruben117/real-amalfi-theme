@@ -1,56 +1,76 @@
-[
-  {
-    "label": "Imagen",
-    "name": "image",
-    "type": "image",
-    "responsive": true,
-    "resizable": true,
-    "default": {
-      "src": "",
-      "alt": "Imagen de vivienda",
-      "loading": "lazy"
-    }
-  },
-  {
-    "label": "Título",
-    "name": "title",
-    "type": "text",
-    "default": "Departamentos"
-  },
-  {
-    "label": "Descripción",
-    "name": "content",
-    "type": "richtext",
-    "default": "<p>La opción inteligente para inversionistas que buscan rentas vacacionales o de largo plazo. Practicidad y vistas increíbles.</p>"
-  },
-  {
-    "label": "Alineación del texto",
-    "name": "text_alignment",
-    "type": "choice",
-    "choices": [
-      ["left", "Izquierda"],
-      ["center", "Centro"],
-      ["right", "Derecha"]
-    ],
-    "default": "right"
-  },
-  {
-    "label": "Estilos",
-    "name": "styles",
-    "type": "group",
-    "tab": "STYLE",
-    "children": [
-      {
-        "label": "Espaciado superior",
-        "name": "margin_top",
-        "type": "number",
-        "display": "slider",
-        "min": 0,
-        "max": 100,
-        "default": 20,
-        "step": 1,
-        "suffix": "px"
-      }
-    ]
+[ {
+  "id" : "image",
+  "name" : "image",
+  "label" : "Imagen",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : "Imagen de vivienda",
+    "loading" : "lazy"
   }
-]
+}, {
+  "id" : "title",
+  "name" : "title",
+  "label" : "Título",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Departamentos"
+}, {
+  "id" : "content",
+  "name" : "content",
+  "label" : "Descripción",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>La opción inteligente para inversionistas que buscan rentas vacacionales o de largo plazo. Practicidad y vistas increíbles.</p>"
+}, {
+  "id" : "text_alignment",
+  "name" : "text_alignment",
+  "label" : "Alineación del texto",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left", "Izquierda" ], [ "center", "Centro" ], [ "right", "Derecha" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "right"
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "label" : "Estilos",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.margin_top",
+    "name" : "margin_top",
+    "label" : "Espaciado superior",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "display_width" : null,
+    "default" : 20
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

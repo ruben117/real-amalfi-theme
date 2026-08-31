@@ -1,103 +1,179 @@
-[
-  {
-    "id": "items",
-    "name": "items",
-    "label": "Prototipos",
-    "type": "group",
-    "repeater": true,
-    "occurrence": { "min": 1, "max": 8, "default": 4 },
-    "children": [
-      {
-        "id": "prototipo_imagen",
-        "name": "prototipo_imagen",
-        "label": "Imagen",
-        "type": "image",
-        "default": { "src": "", "alt": "", "loading": "lazy" }
+[ {
+  "id" : "items",
+  "name" : "items",
+  "label" : "Prototipos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "prototipo_imagen",
+    "name" : "prototipo_imagen",
+    "label" : "Imagen",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "prototipo_nombre",
+    "name" : "prototipo_nombre",
+    "label" : "Nombre del prototipo",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Prototipo"
+  }, {
+    "id" : "prototipo_m2",
+    "name" : "prototipo_m2",
+    "label" : "Metros cuadrados",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "00.00 m²"
+  }, {
+    "id" : "prototipo_desc",
+    "name" : "prototipo_desc",
+    "label" : "Descripción",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prototipo_enlace",
+    "name" : "prototipo_enlace",
+    "label" : "Enlace (página del prototipo)",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "href" : ""
       },
-      {
-        "id": "prototipo_nombre",
-        "name": "prototipo_nombre",
-        "label": "Nombre del prototipo",
-        "type": "text",
-        "default": "Prototipo"
-      },
-      {
-        "id": "prototipo_m2",
-        "name": "prototipo_m2",
-        "label": "Metros cuadrados",
-        "type": "text",
-        "default": "00.00 m²"
-      },
-      {
-        "id": "prototipo_desc",
-        "name": "prototipo_desc",
-        "label": "Descripción",
-        "type": "text",
-        "default": ""
-      },
-      {
-        "id": "prototipo_enlace",
-        "name": "prototipo_enlace",
-        "label": "Enlace (página del prototipo)",
-        "type": "link",
-        "default": { "url": { "href": "" }, "open_in_new_tab": false }
-      },
-      {
-        "id": "prototipo_imagen_tipo",
-        "name": "prototipo_imagen_tipo",
-        "label": "Imagen",
-        "type": "image",
-        "default": { "src": "", "alt": "", "loading": "lazy" }
-      },
-      {
-        "id": "prototipo_imagen_recamaras",
-        "name": "prototipo_imagen_recamaras",
-        "label": "Imagen",
-        "type": "image",
-        "default": { "src": "", "alt": "", "loading": "lazy" }
-      },
-      {
-        "id": "prototipo_imagen_banos",
-        "name": "prototipo_imagen_banos",
-        "label": "Imagen",
-        "type": "image",
-        "default": { "src": "", "alt": "", "loading": "lazy" }
-      },
-      {
-        "id": "prototipo_amen_desc_1",
-        "name": "prototipo_amen_desc_1",
-        "label": "Recamaras",
-        "type": "text",
-        "default": ""
-      },
-      {
-        "id": "prototipo_amen_num_1",
-        "name": "prototipo_amen_num_1",
-        "label": "Número de recamaras",
-        "type": "text",
-        "default": ""
-      },
-      {
-        "id": "prototipo_amen_desc_2",
-        "name": "prototipo_amen_desc_2",
-        "label": "Recamaras",
-        "type": "text",
-        "default": ""
-      },
-      {
-        "id": "prototipo_amen_num_2",
-        "name": "prototipo_amen_num_2",
-        "label": "Número de recamaras",
-        "type": "text",
-        "default": ""
-      },
-      {
-        "id": "prototipo_agotado",
-        "name": "prototipo_agotado",
-        "label": "¿Está agotado?",
-        "type": "boolean",
-        "default": false
-      }
-    ]
-  }
-]
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "prototipo_imagen_tipo",
+    "name" : "prototipo_imagen_tipo",
+    "label" : "Imagen",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "prototipo_imagen_recamaras",
+    "name" : "prototipo_imagen_recamaras",
+    "label" : "Imagen",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "prototipo_imagen_banos",
+    "name" : "prototipo_imagen_banos",
+    "label" : "Imagen",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "prototipo_amen_desc_1",
+    "name" : "prototipo_amen_desc_1",
+    "label" : "Recamaras",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prototipo_amen_num_1",
+    "name" : "prototipo_amen_num_1",
+    "label" : "Número de recamaras",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prototipo_amen_desc_2",
+    "name" : "prototipo_amen_desc_2",
+    "label" : "Recamaras",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prototipo_amen_num_2",
+    "name" : "prototipo_amen_num_2",
+    "label" : "Número de recamaras",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prototipo_agotado",
+    "name" : "prototipo_agotado",
+    "label" : "¿Está agotado?",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -21,14 +21,14 @@
   color: #ffffff;
   font-weight: var(--font-weight-heading);
   line-height: 1.25;
-  margin: 75px 0 1.25rem;
+  margin: 0px 0 10px;
 }
 
 .contacto__desc-module p {
   color: rgba(255, 255, 255, 0.85);
   font-size: clamp(16px, 1vw, 15px);
   line-height: 1.6;
-  margin: 0 0 1.75rem;
+  margin: 0 0 20px;
 }
 
 /* ── Columna derecha: contenedor del formulario ──────────── */
@@ -172,7 +172,7 @@ form .legal-consent-container .hs-richtext p {
 /* Checkbox aviso de privacidad */
 .contacto__form-module .legal-consent-container,
 .contacto__form-module .hs-form-field.hs-fieldtype-booleancheckbox {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 
 .contacto__form-module .hs-form-booleancheckbox-display,
@@ -220,12 +220,12 @@ form .inputs-list > li{margin:0px}
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 0.875rem 1.5rem;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 20px;
   transition: background-color 0.2s ease;
-  width: 100%;
-  margin-top: 25px;
+  width: auto !important;
+  margin-top: 0px;
 }
 
 .contacto__form-module .hs-button:hover,

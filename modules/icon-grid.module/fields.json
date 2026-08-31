@@ -1,124 +1,183 @@
-[
-  {
-    "id": "items",
-    "name": "items",
-    "label": "Íconos",
-    "type": "group",
-    "repeater": true,
-    "occurrence": { "min": 1, "max": 12, "default": 3 },
-    "children": [
-      {
-        "id": "icono_imagen",
-        "name": "icono_imagen",
-        "label": "Imagen del ícono",
-        "type": "image",
-        "default": { "src": "", "alt": "", "loading": "lazy" }
-      },
-      {
-        "id": "icono_enlace",
-        "name": "icono_enlace",
-        "label": "Enlace",
-        "type": "link",
-        "default": { "url": { "href": "#" }, "open_in_new_tab": false }
-      }
-    ]
+[ {
+  "id" : "items",
+  "name" : "items",
+  "label" : "Íconos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 12,
+    "sorting_label_field" : null,
+    "default" : 3
   },
-  {
-    "id": "config",
-    "name": "config",
-    "label": "Configuración Flex",
-    "type": "group",
-    "tab": "STYLE",
-    "children": [
-      {
-        "id": "flex_direction",
-        "name": "flex_direction",
-        "label": "Dirección",
-        "type": "choice",
-        "display": "radio",
-        "choices": [["row","Fila (horizontal)"],["column","Columna (vertical)"]],
-        "default": "row"
+  "children" : [ {
+    "id" : "icono_imagen",
+    "name" : "icono_imagen",
+    "label" : "Imagen del ícono",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "icono_enlace",
+    "name" : "icono_enlace",
+    "label" : "Enlace",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "href" : "#"
       },
-      {
-        "id": "flex_wrap",
-        "name": "flex_wrap",
-        "label": "Envolver elementos",
-        "type": "choice",
-        "display": "radio",
-        "choices": [["wrap","Sí (wrap)"],["nowrap","No (nowrap)"]],
-        "default": "wrap"
-      },
-      {
-        "id": "justify_content",
-        "name": "justify_content",
-        "label": "Alineación horizontal (justify-content)",
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          ["flex-start","Inicio"],
-          ["center","Centro"],
-          ["flex-end","Final"],
-          ["space-between","Espacio entre"],
-          ["space-around","Espacio alrededor"]
-        ],
-        "default": "flex-start"
-      },
-      {
-        "id": "align_items",
-        "name": "align_items",
-        "label": "Alineación vertical (align-items)",
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          ["flex-start","Inicio"],
-          ["center","Centro"],
-          ["flex-end","Final"]
-        ],
-        "default": "center"
-      },
-      {
-        "id": "icono_gap",
-        "name": "icono_gap",
-        "label": "Espacio entre íconos (px)",
-        "type": "number",
-        "min": 0,
-        "max": 80,
-        "default": 12
-      },
-      {
-        "id": "icono_size",
-        "name": "icono_size",
-        "label": "Tamaño del ícono (px)",
-        "type": "number",
-        "min": 24,
-        "max": 160,
-        "default": 56
-      },
-      {
-        "id": "icono_padding",
-        "name": "icono_padding",
-        "label": "Padding interior del ícono (px)",
-        "type": "number",
-        "min": 0,
-        "max": 40,
-        "default": 0
-      },
-      {
-        "id": "icono_radius",
-        "name": "icono_radius",
-        "label": "Border radius (px)",
-        "type": "number",
-        "min": 0,
-        "max": 80,
-        "default": 0
-      },
-      {
-        "id": "icono_bg",
-        "name": "icono_bg",
-        "label": "Color de fondo del ícono",
-        "type": "color",
-        "default": { "color": "#CBD527", "opacity": 100 }
-      }
-    ]
-  }
-]
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+}, {
+  "id" : "config",
+  "name" : "config",
+  "label" : "Configuración Flex",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "flex_direction",
+    "name" : "flex_direction",
+    "label" : "Dirección",
+    "required" : false,
+    "locked" : false,
+    "display" : "radio",
+    "choices" : [ [ "row", "Fila (horizontal)" ], [ "column", "Columna (vertical)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "row"
+  }, {
+    "id" : "flex_wrap",
+    "name" : "flex_wrap",
+    "label" : "Envolver elementos",
+    "required" : false,
+    "locked" : false,
+    "display" : "radio",
+    "choices" : [ [ "wrap", "Sí (wrap)" ], [ "nowrap", "No (nowrap)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "wrap"
+  }, {
+    "id" : "justify_content",
+    "name" : "justify_content",
+    "label" : "Alineación horizontal (justify-content)",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "flex-start", "Inicio" ], [ "center", "Centro" ], [ "flex-end", "Final" ], [ "space-between", "Espacio entre" ], [ "space-around", "Espacio alrededor" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "flex-start"
+  }, {
+    "id" : "align_items",
+    "name" : "align_items",
+    "label" : "Alineación vertical (align-items)",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "flex-start", "Inicio" ], [ "center", "Centro" ], [ "flex-end", "Final" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "center"
+  }, {
+    "id" : "icono_gap",
+    "name" : "icono_gap",
+    "label" : "Espacio entre íconos (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 0,
+    "max" : 80,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 12
+  }, {
+    "id" : "icono_size",
+    "name" : "icono_size",
+    "label" : "Tamaño del ícono (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 24,
+    "max" : 160,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 56
+  }, {
+    "id" : "icono_padding",
+    "name" : "icono_padding",
+    "label" : "Padding interior del ícono (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 0,
+    "max" : 40,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 0
+  }, {
+    "id" : "icono_radius",
+    "name" : "icono_radius",
+    "label" : "Border radius (px)",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 0,
+    "max" : 80,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 0
+  }, {
+    "id" : "icono_bg",
+    "name" : "icono_bg",
+    "label" : "Color de fondo del ícono",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#CBD527",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

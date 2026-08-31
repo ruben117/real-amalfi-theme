@@ -1,92 +1,111 @@
-[
-  {
-    "id": "slides",
-    "name": "slides",
-    "label": "Imágenes de Fondo",
-    "type": "group",
-    "occurrence": {
-      "min": 1,
-      "max": 10,
-      "default": 3
-    },
-    "children": [
-      {
-        "id": "image",
-        "name": "image",
-        "label": "Imagen",
-        "type": "image",
-        "required": true,
-        "default": {
-          "alt": "Imagen de fondo carrusel",
-          "loading": "eager"
-        }
-      }
-    ],
-    "default": [
-      {
-        "image": {
-          "src": "../../images/bg-hero-amalfi.png",
-          "alt": "Real Amalfi Hero 1"
-        }
-      },
-      {
-        "image": {
-          "src": "../../images/header-amalfi-desarrollos.png",
-          "alt": "Real Amalfi Hero 2"
-        }
-      },
-      {
-        "image": {
-          "src": "../../images/bg-prototipos-amalfi.png",
-          "alt": "Real Amalfi Hero 3"
-        }
-      }
-    ]
+[ {
+  "id" : "slides",
+  "name" : "slides",
+  "label" : "Imágenes de Fondo",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 3
   },
-  {
-    "id": "autoplay",
-    "name": "autoplay",
-    "label": "Reproducción automática",
-    "type": "boolean",
-    "default": true
-  },
-  {
-    "id": "autoplay_delay",
-    "name": "autoplay_delay",
-    "label": "Intervalo de autoplay (ms)",
-    "type": "number",
-    "default": 5000,
-    "min": 1000,
-    "max": 20000
-  },
-  {
-    "id": "transition_type",
-    "name": "transition_type",
-    "label": "Tipo de transición",
-    "type": "choice",
-    "display": "select",
-    "choices": [
-      ["fade", "Desvanecimiento (Fade)"],
-      ["slide", "Desplazamiento horizontal (Slide)"]
-    ],
-    "default": "fade"
-  },
-  {
-    "id": "overlay",
-    "name": "overlay",
-    "label": "Capa de superposición (Overlay)",
-    "type": "group",
-    "children": [
-      {
-        "id": "color",
-        "name": "color",
-        "label": "Color del overlay",
-        "type": "color",
-        "default": {
-          "color": "#000000",
-          "opacity": 40
-        }
-      }
-    ]
-  }
-]
+  "children" : [ {
+    "id" : "image",
+    "name" : "image",
+    "label" : "Imagen",
+    "required" : true,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "alt" : "Imagen de fondo carrusel",
+      "loading" : "eager"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "image" : {
+      "src" : "../../images/bg-hero-amalfi.png",
+      "alt" : "Real Amalfi Hero 1"
+    }
+  }, {
+    "image" : {
+      "src" : "../../images/header-amalfi-desarrollos.png",
+      "alt" : "Real Amalfi Hero 2"
+    }
+  }, {
+    "image" : {
+      "src" : "../../images/bg-prototipos-amalfi.png",
+      "alt" : "Real Amalfi Hero 3"
+    }
+  } ]
+}, {
+  "id" : "autoplay",
+  "name" : "autoplay",
+  "label" : "Reproducción automática",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "autoplay_delay",
+  "name" : "autoplay_delay",
+  "label" : "Intervalo de autoplay (ms)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1000,
+  "max" : 20000,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 5000
+}, {
+  "id" : "transition_type",
+  "name" : "transition_type",
+  "label" : "Tipo de transición",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "fade", "Desvanecimiento (Fade)" ], [ "slide", "Desplazamiento horizontal (Slide)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "fade"
+}, {
+  "id" : "overlay",
+  "name" : "overlay",
+  "label" : "Capa de superposición (Overlay)",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "color",
+    "name" : "color",
+    "label" : "Color del overlay",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 40
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]
