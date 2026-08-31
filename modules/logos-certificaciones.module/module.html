@@ -1,0 +1,40 @@
+{# module.html #}
+<div class="logos-certificaciones" style="
+  background-color: {{ module.bg_color.color }};
+  padding: {{ module.padding_v }}px 0;
+">
+  <div class="content-wrapper">
+    <div class="logos-certificaciones__list" style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: {{ module.gap }}px;
+    ">
+      {% for item in module.logos %}
+        {% if item.logo_imagen.src %}
+          <div class="logos-certificaciones__item">
+            <img 
+              src="{{ item.logo_imagen.src }}" 
+              alt="{{ item.logo_alt|default(item.logo_imagen.alt) }}"
+              style="
+                height: {{ module.logo_altura }}px;
+                width: auto;
+                {% if module.logo_filtro == 'blanco' %}
+                  filter: brightness(0) invert(1);
+                {% elif module.logo_filtro == 'negro' %}
+                  filter: brightness(0);
+                {% elif module.logo_filtro == 'escala_grises' %}
+                  filter: grayscale(100%);
+                {% endif %}
+                opacity: {{ module.logo_opacidad / 100 }};
+                object-fit: contain;
+              "
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

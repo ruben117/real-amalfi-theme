@@ -63,7 +63,7 @@
 .prototipos-grid__img_recamaras_min{
     font-size: 10px;
     float: left;
-    color: #009DB0;
+    color: var(--primary-color);
     margin: 10px 0 0 10px;
 }
 .prototipos-grid__img_recamaras_min_num{

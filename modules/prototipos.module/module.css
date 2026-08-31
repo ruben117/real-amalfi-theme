@@ -69,13 +69,7 @@
 .prototipos-grid__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 30%,
-    rgba(0, 0, 0, 0.2) 55%,
-    rgba(0, 0, 0, 0.1) 70%,
-    #000000 100%
-  );
+  
 }
 
 /* ── Content ───────────────────────────────────────────────── */

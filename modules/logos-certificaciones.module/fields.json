@@ -1,0 +1,69 @@
+[
+  {
+    "name": "logo_altura",
+    "label": "Altura del logo (px)",
+    "type": "number",
+    "default": 70
+  },
+  {
+    "name": "logo_filtro",
+    "label": "Filtro del logo",
+    "type": "choice",
+    "default": "blanco",
+    "choices": [
+      ["ninguno", "Ninguno"],
+      ["blanco", "Blanco"],
+      ["negro", "Negro"],
+      ["escala_grises", "Escala de grises"]
+    ]
+  },
+  {
+    "name": "logo_opacidad",
+    "label": "Opacidad del logo (%)",
+    "type": "number",
+    "min": 0,
+    "max": 100,
+    "default": 85
+  },
+  {
+    "name": "gap",
+    "label": "Espaciado entre logos (px)",
+    "type": "number",
+    "default": 48
+  },
+  {
+    "name": "padding_v",
+    "label": "Relleno vertical (px)",
+    "type": "number",
+    "default": 28
+  },
+  {
+    "name": "bg_color",
+    "label": "Color de fondo",
+    "type": "color",
+    "default": { "color": "#000000", "opacity": 100 }
+  },
+  {
+    "name": "logos",
+    "label": "Logos de certificaciones",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "sorting_type": "ASC",
+      "default": 1
+    },
+    "children": [
+      {
+        "name": "logo_alt",
+        "label": "Texto alternativo",
+        "type": "text"
+      },
+      {
+        "name": "logo_imagen",
+        "label": "Imagen del logo",
+        "type": "image"
+      }
+    ]
+  }
+]
