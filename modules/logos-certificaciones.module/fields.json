@@ -1,0 +1,121 @@
+[ {
+  "id" : "logo_altura",
+  "name" : "logo_altura",
+  "label" : "Altura del logo (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 70
+}, {
+  "id" : "logo_filtro",
+  "name" : "logo_filtro",
+  "label" : "Filtro del logo",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "ninguno", "Ninguno" ], [ "blanco", "Blanco" ], [ "negro", "Negro" ], [ "escala_grises", "Escala de grises" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "blanco"
+}, {
+  "id" : "logo_opacidad",
+  "name" : "logo_opacidad",
+  "label" : "Opacidad del logo (%)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 0,
+  "max" : 100,
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 85
+}, {
+  "id" : "gap",
+  "name" : "gap",
+  "label" : "Espaciado entre logos (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 48
+}, {
+  "id" : "padding_v",
+  "name" : "padding_v",
+  "label" : "Relleno vertical (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 28
+}, {
+  "id" : "bg_color",
+  "name" : "bg_color",
+  "label" : "Color de fondo",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "display_width" : null,
+  "default" : {
+    "color" : "#000000",
+    "opacity" : 100
+  }
+}, {
+  "id" : "logos",
+  "name" : "logos",
+  "label" : "Logos de certificaciones",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "logos.logo_alt",
+    "name" : "logo_alt",
+    "label" : "Texto alternativo",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "logos.logo_imagen",
+    "name" : "logo_imagen",
+    "label" : "Imagen del logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : null,
+      "size_type" : null,
+      "width" : null,
+      "height" : null,
+      "max_width" : null,
+      "max_height" : null,
+      "loading" : "disabled"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]
