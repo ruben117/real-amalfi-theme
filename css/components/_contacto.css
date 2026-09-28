@@ -97,7 +97,7 @@ form .hs-button, form input[type=submit] {
 /* Título del formulario ("FORMULARIO DE CONTACTO") */
 .contacto__form-module .form-title,
 .contacto__form-module h3 {
-  color: var(--primary-color, #E0001A);
+  color: var(--text-color, #000104);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.14em;
