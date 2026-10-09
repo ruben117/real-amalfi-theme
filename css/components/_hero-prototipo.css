@@ -36,7 +36,7 @@
 /* ── Título h1 ───────────────────────────────────────────── */
 
 .hero-prototipo__title-module h1 {
-  color: var(--heading-color-dark);
+  color: #ffffff;
   font-size: 2rem;
   font-weight: var(--font-weight-heading);
   line-height: 1;
@@ -47,7 +47,7 @@
 /* ── Descripción ─────────────────────────────────────────── */
 
 .hero-prototipo__body-module p {
-  color: var(--heading-color-dark);
+  color: #ffffff;
   font-size: clamp(13px, 1vw, 15px);
   font-size: var(--font-size-base);
   line-height: 1.65;

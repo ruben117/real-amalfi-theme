@@ -1,0 +1,28 @@
+<!--
+  templateType: section
+  label: Ancla – Contacto
+  isAvailableForNewContent: true
+  description: "Sección sin altura ni espacios que contiene el módulo Anchor con ID #contacto, destino del scroll del CTA del header."
+-->
+
+{% dnd_section
+  padding={
+    "default": { "top": 0, "bottom": 0 },
+    "mobile":  { "top": 0, "bottom": 0 }
+  },
+  margin={
+    "default": { "top": 0, "bottom": 0 },
+    "mobile":  { "top": 0, "bottom": 0 }
+  }
+%}
+  {% dnd_column offset=0, width=12 %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/anchor",
+        label="Ancla – Contacto",
+        anchor_id="contacto"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

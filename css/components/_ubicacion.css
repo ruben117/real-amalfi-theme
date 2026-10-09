@@ -107,7 +107,7 @@
 
 /* Zoom: escala 2.5× al hacer hover — transform-origin cambia con el cursor (via JS) */
 .ubicacion-mapa__zoom:hover .ubicacion-mapa__img.is-visible {
-  scale: 3;
+  scale: 2;
 }
 
 /* ── Columna derecha ───────────────────────────────────── */
