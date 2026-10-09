@@ -58,23 +58,6 @@
       {% end_dnd_module %}
     {% end_dnd_row %}
 
-    {# ── Descripción ─────────────────────────────────────────── #}
-    {% dnd_row %}
-      {% dnd_module
-        path="../modules/edge-stat",
-        label="Cert. EDGE – Stats",
-        extra_classes="cert-edge__stats-module",
-        offset=0, width=12,
-        items=[
-          { "tipo": "energia",      "valor": 31   },
-          { "tipo": "agua",         "valor": 44   },
-          { "tipo": "co2",          "valor": 1.62 },
-          { "tipo": "nivel_ahorro", "valor": 75   }
-        ]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_row %}
-
   {% end_dnd_column %}
 
 {% end_dnd_section %}
